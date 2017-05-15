@@ -1,0 +1,7 @@
+http://www.cv-foundation.org/openaccess/content_iccv_workshops_2013/W02/papers/Kuznetsova_Real-Time_Sign_Language_2013_ICCV_paper.pdf
+https://drive.google.com/drive/folders/0Bw239KLrN7zofm5YRUdFTk1yOWJqRnZJRFNEeGJPR2RZSGowd1dCemQ0cUdrQXRMU2NJTmM
+https://github.com/mon95/Sign-Language-and-Static-gesture-recognition-using-sklearn/tree/master/dataset
+https://github.com/ssaamm/sign-language-tutor
+http://people.csail.mit.edu/yingyin/resources/doc/projects/6867term-project.pdf
+http://ieeexplore.ieee.org/document/4563181/?part=1
+https://www.handspeak.com/word/asl-eng/index.php?fmFig=1-claw&fmMov=unidir&fmLoc=0-num&fmBoth=1
