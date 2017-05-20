@@ -52,14 +52,13 @@
     <requires type="static">
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
-      <file>biblatex.def</file>
+      <file>biblatex_.def</file>
       <file>trad-alpha.bbx</file>
       <file>trad-standard.bbx</file>
       <file>standard.bbx</file>
       <file>trad-alpha.cbx</file>
       <file>alphabetic.cbx</file>
       <file>biblatex.cfg</file>
-      <file>english.lbx</file>
       <file>lithuanian.lbx</file>
     </requires>
   </internal>
