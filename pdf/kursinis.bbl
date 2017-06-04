@@ -35,7 +35,6 @@
       \field{title}{Understanding LSTM Networks}
       \field{year}{2015}
     \endentry
-<<<<<<< HEAD
     \entry{Hay09}{book}{}
       \name{author}{1}{}{%
         {{hash=91e57481898b943d6a72a1deba06a6a9}{%
@@ -60,8 +59,6 @@
       \field{title}{Neural Networks and Learning Machines}
       \field{year}{2009}
     \endentry
-=======
->>>>>>> 3e0fe855f2853dbe1cdd59c55990ee92f2a6e777
     \entry{WhoInt}{misc}{}
       \name{author}{1}{}{%
         {{hash=07025dc7a22c08e61d41e77563b30557}{%
@@ -370,8 +367,8 @@
       \range{pages}{13}
     \endentry
   \endsortlist
-  \missing{remiantis United States Census Bureau’s data from the 2009-2013 American Community Survey}
   \missing{PvzElPubLt}
+  \missing{remiantis United States Census Bureau’s data from the 2009-2013 American Community Survey}
 \endrefsection
 \endinput
 
