@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.5.15)  4 JUN 2017 15:42
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.5.15)  4 JUN 2017 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1048,7 +1048,21 @@ Package biblatex Info: ... file 'kursinis.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                PvzElPubLt
+(biblatex)                PvzMagistrLt
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                PvzKonfEn
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                PvzPhdEn
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1057,6 +1071,55 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
 (biblatex)                remiantis United States Census Bureau’s data from the
  2009-2013 American Community Survey
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                PvzKnygLt
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                PvzStraipsnEn
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                PvzStraipsnLt
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                PvzElPubLt
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                PvzKnygEn
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                PvzElPubEn
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                PvzKonfLt
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1125,24 +1188,13 @@ File: img/A-white.jpg Graphic file (type QTm)
 
 ] [12
 
-] [13
-
-] [14
-
 ]
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 293
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 292
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [15
-
-]
-File: img/MLP.png Graphic file (type QTm)
-
-<use  "img/MLP.png" > [16
-
-] [17
+) [13
 
 ] (./kursinis.aux)
 Package logreq Info: Writing requests to 'kursinis.run.xml'.
@@ -1150,12 +1202,12 @@ Package logreq Info: Writing requests to 'kursinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23809 strings out of 493638
- 445268 string characters out of 6146796
- 818216 words of memory out of 5000000
- 26915 multiletter control sequences out of 15000+600000
- 15702 words of font info for 82 fonts, out of 8000000 for 9000
+ 23758 strings out of 493638
+ 444215 string characters out of 6146796
+ 818128 words of memory out of 5000000
+ 26877 multiletter control sequences out of 15000+600000
+ 11222 words of font info for 62 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 68i,11n,96p,10497b,3650s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,11n,96p,10497b,3646s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on kursinis.pdf (18 pages).
+Output written on kursinis.pdf (14 pages).

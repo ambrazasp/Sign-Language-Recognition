@@ -26,7 +26,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.}Kadro apdorojimas naudojant Sobel valdiklį}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.}Kadro atidavimas savaime apsimokančioms sistemoms}{9}
+\contentsline {subsection}{\numberline {3.2.}Apsimokančių sistemų apmokymas iš kadro}{9}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.}Gestų kalbos statinių ženklų atpažinimas}{10}
 \defcounter {refsection}{0}\relax 
@@ -36,48 +36,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.}Gestų kalbos dinaminių ženklų atpažinimas}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.}Pagrindinė tiriamoji dalis}{12}
+\contentsline {section}{Išvados}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.}Poskyris}{12}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.1.1.}Skirsnis}{12}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {6.1.1.1.}Straipsnis}{12}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.1.2.}Skirsnis}{12}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.}Skyrius}{13}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.}Poskyris}{13}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.}Poskyris}{13}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Išvados}{14}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{15}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {lithuanian}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {lithuanian}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {lithuanian}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {lithuanian}
+\contentsline {section}{Literatūra}{13}
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 
 \select@language {lithuanian}
 \defcounter {refsection}{0}\relax 
 \def \@dotsep {1000}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Priedas Nr.1}{}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Priedas Nr.2}{}

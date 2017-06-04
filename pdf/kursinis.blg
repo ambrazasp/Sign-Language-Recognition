@@ -1,18 +1,27 @@
 [0] Config.pm:340> INFO - This is Biber 2.4
 [0] Config.pm:343> INFO - Logfile is 'kursinis.blg'
-[32] biber:287> INFO - === Sk Bir  4, 2017, 15:42:43
-[112] Biber.pm:348> INFO - Reading 'kursinis.bcf'
-[239] Biber.pm:742> INFO - Found 14 citekeys in bib section 0
-[244] Biber.pm:3151> INFO - Processing section 0
-[270] Biber.pm:3308> INFO - Looking for bibtex format file 'bibliografija.bib' for section 0
-[281] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
-[291] bibtex.pm:974> INFO - Found BibTeX data source 'bibliografija.bib'
-[367] Utils.pm:147> WARN - BibTeX subsystem: /tmp/2p34Rm2X3P/bibliografija.bib_3038.utf8, line 4, warning: 148 characters of junk seen at toplevel
-[367] Utils.pm:147> WARN - I didn't find a database entry for 'remiantis United States Census Bureau’s data from the 2009-2013 American Community Survey' (section 0)
-[367] Utils.pm:147> WARN - I didn't find a database entry for 'PvzElPubLt' (section 0)
-[472] UCollate.pm:65> INFO - Overriding locale 'lt-LT' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[472] UCollate.pm:65> INFO - Overriding locale 'lt-LT' defaults 'variable = shifted' with 'variable = non-ignorable'
-[472] Biber.pm:3028> INFO - Sorting list 'anyt/global' of type 'entry' with scheme 'anyt' and locale 'lt-LT'
-[490] bbl.pm:519> INFO - Writing 'kursinis.bbl' with encoding 'UTF-8'
-[522] bbl.pm:615> INFO - Output to kursinis.bbl
-[523] Biber.pm:109> INFO - WARNINGS: 3
+[34] biber:287> INFO - === Sk Bir  4, 2017, 17:37:57
+[119] Biber.pm:348> INFO - Reading 'kursinis.bcf'
+[244] Biber.pm:742> INFO - Found 15 citekeys in bib section 0
+[249] Biber.pm:3151> INFO - Processing section 0
+[274] Biber.pm:3308> INFO - Looking for bibtex format file 'bibliografija.bib' for section 0
+[287] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[301] bibtex.pm:974> INFO - Found BibTeX data source 'bibliografija.bib'
+[327] Utils.pm:147> WARN - BibTeX subsystem: /tmp/6AE_JmkD9I/bibliografija.bib_3869.utf8, line 4, warning: 148 characters of junk seen at toplevel
+[327] Utils.pm:147> WARN - I didn't find a database entry for 'remiantis United States Census Bureau’s data from the 2009-2013 American Community Survey' (section 0)
+[327] Utils.pm:147> WARN - I didn't find a database entry for 'PvzStraipsnLt' (section 0)
+[327] Utils.pm:147> WARN - I didn't find a database entry for 'PvzStraipsnEn' (section 0)
+[327] Utils.pm:147> WARN - I didn't find a database entry for 'PvzKonfLt' (section 0)
+[327] Utils.pm:147> WARN - I didn't find a database entry for 'PvzKonfEn' (section 0)
+[327] Utils.pm:147> WARN - I didn't find a database entry for 'PvzKnygLt' (section 0)
+[328] Utils.pm:147> WARN - I didn't find a database entry for 'PvzKnygEn' (section 0)
+[328] Utils.pm:147> WARN - I didn't find a database entry for 'PvzElPubLt' (section 0)
+[328] Utils.pm:147> WARN - I didn't find a database entry for 'PvzElPubEn' (section 0)
+[328] Utils.pm:147> WARN - I didn't find a database entry for 'PvzMagistrLt' (section 0)
+[328] Utils.pm:147> WARN - I didn't find a database entry for 'PvzPhdEn' (section 0)
+[360] UCollate.pm:65> INFO - Overriding locale 'lt-LT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[360] UCollate.pm:65> INFO - Overriding locale 'lt-LT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[360] Biber.pm:3028> INFO - Sorting list 'anyt/global' of type 'entry' with scheme 'anyt' and locale 'lt-LT'
+[366] bbl.pm:519> INFO - Writing 'kursinis.bbl' with encoding 'UTF-8'
+[375] bbl.pm:615> INFO - Output to kursinis.bbl
+[376] Biber.pm:109> INFO - WARNINGS: 12

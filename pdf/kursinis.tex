@@ -63,7 +63,7 @@ Vienas neuronas priima informaciją per dendritus, tuomet pats neuronas nusprend
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.5\linewidth]{img/neuron-structure}
-	\caption{Neuroninio tinklo struktūra \cite{RecurrentNeuralNetwork}}
+	\caption{Neuroninio tinklo struktūra \cite{ArtificialNeuralNetwork}}
 	\label{img:neuron_structure}
 	%https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_neural_networks.htm
 \end{figure}
@@ -82,9 +82,8 @@ Neuronai dirbtiniame neuroniniame tinkle yra sujungti jungtimis. Taip jie tarpus
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.4\linewidth]{img/ann}
-	\caption{Dirbtinio neuroninio tinklo struktūra \cite{RecurrentNeuralNetwork}}
+	\caption{Dirbtinio neuroninio tinklo struktūra \cite{ArtificialNeuralNetwork}}
 	\label{img:ann}
-	%https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_neural_networks.htm
 \end{figure}
 
 
@@ -245,9 +244,9 @@ Po šių žinsnių turime matricą, kuriose keičiasi spalva. dabar išimti tuos
 
 Ieškant kontūro taip pat atmetame ir tuos kontūrus, kurie, pavyzdžiui, neužima daugiau nei 5\% viso ploto ir nubrėžiame kontūrą.
 
-Kitas žingsnis paversti kadrą į kompiuteriui suprantamą kalbą ir kuo paprastesnę. Turėdami kontūrus, galime kadrą paversti į dvispalvį kadrą, kur viskas, kas yra kontūre bus baltos spalvos, o viskas kas už kontūro - juodos. Tam reiktų pasidaryti kaukę (\textit{angl. mask}), kurioje viskas, kas už kontūro ribų bus juodos spalvos (žr. \ref{img:a-black-sign} pav.), o paskui ištrinti tai, kas yra kontūre ir padaryti baltos spalvos (žr. \ref{img:a-white-sign} pav.).
+Kitas žingsnis paversti kadrą į kompiuteriui suprantamą kalbą ir kuo paprastesnę. Turėdami kontūrus, galime kadrą paversti į dvispalvį kadrą, kur viskas, kas yra kontūre bus baltos spalvos, o viskas kas už kontūro - juodos. Tam reiktų pasidaryti kaukę (\textit{angl. mask}), kurioje viskas, kas už kontūro ribų bus juodos spalvos (\textit{žr. \ref{img:a-black-sign} pav.}), o paskui ištrinti tai, kas yra kontūre ir padaryti baltos spalvos (\textit{žr. \ref{img:a-white-sign} pav.}).
 
-\subsection{Kadro atidavimas savaime apsimokančioms sistemoms}
+\subsection{Apsimokančių sistemų apmokymas iš kadro}
 Savaime apsimokančios sistemos, tokios kaip \textit{sklearn} konvertuoja jau apdorotą kadrą į matricą, kur juoda - 0, o balta - 255. Tuomet ši matrica yra „suplokštinama“ ir gauname masyvą. Galiausiai šiuos duomenis sudeda į failą, kad vėliau jais būtų galima pasinaudoti.
 
 
@@ -268,23 +267,23 @@ Norint atpažinti statinius gestus naudojant internetinę kamerą, vienas iš to
 \section{Gestų kalbos dinaminių ženklų atpažinimas}
 
 
-\section{Pagrindinė tiriamoji dalis}
-Pagrindinėje tiriamojoje dalyje aptariama ir pagrindžiama tyrimo metodika;
-pagal atitinkamas darbo dalis, nuosekliai, panaudojant lyginamosios analizės,
-klasifikacijos, sisteminimo metodus bei apibendrinimus, dėstoma sukaupta ir
-išanalizuota medžiaga.
-
-\subsection{Poskyris}
-Citavimo pavyzdžiai: cituojamas vienas šaltinis \cite{PvzStraipsnLt}; cituojami
-keli šaltiniai \cite{PvzStraipsnEn, PvzKonfLt, PvzKonfEn, PvzKnygLt, PvzKnygEn,
-PvzElPubLt, PvzElPubEn, PvzMagistrLt, PvzPhdEn}.
-
-\subsubsection{Skirsnis}
-\subsubsubsection{Straipsnis}
-\subsubsection{Skirsnis}
-\section{Skyrius}
-\subsection{Poskyris}
-\subsection{Poskyris}
+%\section{Pagrindinė tiriamoji dalis}
+%Pagrindinėje tiriamojoje dalyje aptariama ir pagrindžiama tyrimo metodika;
+%pagal atitinkamas darbo dalis, nuosekliai, panaudojant lyginamosios analizės,
+%klasifikacijos, sisteminimo metodus bei apibendrinimus, dėstoma sukaupta ir
+%išanalizuota medžiaga.
+%
+%\subsection{Poskyris}
+%Citavimo pavyzdžiai: cituojamas vienas šaltinis \cite{PvzStraipsnLt}; cituojami
+%keli šaltiniai \cite{PvzStraipsnEn, PvzKonfLt, PvzKonfEn, PvzKnygLt, PvzKnygEn,
+%PvzElPubLt, PvzElPubEn, PvzMagistrLt, PvzPhdEn}.
+%
+%\subsubsection{Skirsnis}
+%\subsubsubsection{Straipsnis}
+%\subsubsection{Skirsnis}
+%\section{Skyrius}
+%\subsection{Poskyris}
+%\subsection{Poskyris}
 
 \sectionnonum{Išvados}
 Išvadose ir pasiūlymuose, nekartojant atskirų dalių apibendrinimų,
@@ -303,28 +302,28 @@ suformuluojamos svarbiausios darbo išvados, rekomendacijos bei pasiūlymai.
 % diskelyje ar kompaktiniame diske. Priedai taip pat vadinami ir numeruojami.
 % Tekstas su priedais siejamas nuorodomis (pvz.: \ref{img:mlp}).
 
-\section{Niauroninio tinklo struktūra}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.5]{img/MLP}
-    \caption{Paveikslėlio pavyzdys}   % Antraštė įterpiama po paveikslėlio
-    \label{img:mlp}
-\end{figure}
-
-
-\section{Eksperimentinio palyginimo rezultatai}
-% tablesgenerator.com - converts calculators (e.g. excel) tables to LaTeX
-\begin{table}[H]\footnotesize
-  \centering
-  \caption{Lentelės pavyzdys}    % Antraštė įterpiama prieš lentelę
-  {\begin{tabular}{|l|c|c|} \hline
-    Algoritmas & $\bar{x}$ & $\sigma^{2}$ \\
-    \hline
-    Algoritmas A  & 1.6335    & 0.5584       \\
-    Algoritmas B  & 1.7395    & 0.5647       \\
-    \hline
-  \end{tabular}}
-  \label{tab:table example}
-\end{table}
+%\section{Niauroninio tinklo struktūra}
+%\begin{figure}[H]
+%    \centering
+%    \includegraphics[scale=0.5]{img/MLP}
+%    \caption{Paveikslėlio pavyzdys}   % Antraštė įterpiama po paveikslėlio
+%    \label{img:mlp}
+%\end{figure}
+%
+%
+%\section{Eksperimentinio palyginimo rezultatai}
+%% tablesgenerator.com - converts calculators (e.g. excel) tables to LaTeX
+%\begin{table}[H]\footnotesize
+%  \centering
+%  \caption{Lentelės pavyzdys}    % Antraštė įterpiama prieš lentelę
+%  {\begin{tabular}{|l|c|c|} \hline
+%    Algoritmas & $\bar{x}$ & $\sigma^{2}$ \\
+%    \hline
+%    Algoritmas A  & 1.6335    & 0.5584       \\
+%    Algoritmas B  & 1.7395    & 0.5647       \\
+%    \hline
+%  \end{tabular}}
+%  \label{tab:table example}
+%\end{table}
 
 \end{document}

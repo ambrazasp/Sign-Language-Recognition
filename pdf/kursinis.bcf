@@ -2055,22 +2055,12 @@
     <bcf:citekey order="1">WhoInt</bcf:citekey>
     <bcf:citekey order="2">remiantis United States Census Bureau’s data from the 2009-2013 American Community Survey</bcf:citekey>
     <bcf:citekey order="3">Hay09</bcf:citekey>
-    <bcf:citekey order="4">RecurrentNeuralNetwork</bcf:citekey>
-    <bcf:citekey order="5">RecurrentNeuralNetwork</bcf:citekey>
-    <bcf:citekey order="6">RecurrentNeuralNetwork</bcf:citekey>
-    <bcf:citekey order="7">RecurrentNeuralNetwork</bcf:citekey>
+    <bcf:citekey order="4">ArtificialNeuralNetwork</bcf:citekey>
+    <bcf:citekey order="5">ArtificialNeuralNetwork</bcf:citekey>
+    <bcf:citekey order="6">ArtificialNeuralNetwork</bcf:citekey>
+    <bcf:citekey order="7">ArtificialNeuralNetwork</bcf:citekey>
     <bcf:citekey order="8">RecurrentNeuralNetwork</bcf:citekey>
     <bcf:citekey order="9">RecurrentNeuralNetwork</bcf:citekey>
-    <bcf:citekey order="10">PvzStraipsnLt</bcf:citekey>
-    <bcf:citekey order="11">PvzStraipsnEn</bcf:citekey>
-    <bcf:citekey order="11">PvzKonfLt</bcf:citekey>
-    <bcf:citekey order="11">PvzKonfEn</bcf:citekey>
-    <bcf:citekey order="11">PvzKnygLt</bcf:citekey>
-    <bcf:citekey order="11">PvzKnygEn</bcf:citekey>
-    <bcf:citekey order="11">PvzElPubLt</bcf:citekey>
-    <bcf:citekey order="11">PvzElPubEn</bcf:citekey>
-    <bcf:citekey order="11">PvzMagistrLt</bcf:citekey>
-    <bcf:citekey order="11">PvzPhdEn</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="anyt/global" type="entry" sortscheme="anyt" sortnamekeyscheme="global">
   <bcf:sorting>
