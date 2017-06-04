@@ -87,6 +87,7 @@ Neuronai dirbtiniame neuroniniame tinkle yra sujungti jungtimis. Taip jie tarpus
 	%https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_neural_networks.htm
 \end{figure}
 
+
 \subsubsection{Rekurentiniai neuroniniai tinklai}
 \textbf{Rekurentiniai neuroniniai tinklai} (\textit{angl. Recurrent neural network}) - tai dirbtinis neuroninis tinklas, kuris saugo informaciją apie praeituose žingsniuose (neuronuose) atliktus veiksmus ar skaičiavimus.
 
@@ -133,6 +134,7 @@ Gestų kalba ir jos atpažinimas naudojant kompiuterinę techniką yra viena iš
 \subsubsection{Problematika}
 Norint atpažinti gestus, paversti juos į raides, žodžius ar sakinius susiduriama su problemomis, kurios susijusios tiek su statinių, tiek su dinaminių gestų atpažinimu.
 
+
 Pagrindinės problemos iškylančios atpažįstant statinius gestų kalbos ženklus yra:
 \begin{enumerate}
 	\item Kiekvienos kalbos abėcėlę sudaro skirtingas raidžių (statinių ženklų) skaičius. \textit{Pavyzdžiui}, lietuvių kalbos abėcėlę sudaro 32 ženklai, o amerikietišką - 26; 
@@ -148,6 +150,7 @@ Pagrindinės problemos iškylančios atpažįstant dinaminius gestų kalbos žen
 	\item Kampas, kuris susidaro atpažįstant gestą. \textit{Pavyzdžiui}, kai A raidė rodoma ne iš priekio, o iš šono;
 	\item Žodžių apjungimas į vieną sakinį. \textit{Pavyzdžiui}, keli gestai einantys vienas po kito gali reikšti vieną žodį, tačiau tuo pačiu būti panašūs į vieną gestą, kuris jau reikš tik vieną žodį.
 \end{enumerate}
+Šiame skyriuje bus pateikta informacija, kaip atpažinti statinę gestų kalbą.
 
 \section{Sistemos apmokymas}
 Norint, jog sistema atpažintų gestus, svarbiausia ją apmokyti ką reiškia tam tikri gestai. Tam galime išnaudoti kadrus (\textit{angl. frame}) ir savaime apsimokančių sistemų galimybes. Tad reiktų imti vieną kadrą ir jį paversti į kompiuteriui suprantamą kalbą. 
@@ -212,13 +215,13 @@ G = \sqrt{G_x^2 + G_y^2}
 		\label{img:a-sobel}
 		%https://www.kspvm.lm.lt/images/naujienos/2016-2017/kurciuju-filmuko-laimejimas/img/lt-gestu-abecele.jpg
 	\end{minipage}\hspace{\fill}%
-		\begin{minipage}{.3\textwidth}
-			\centering
-			\includegraphics[width=.8\linewidth]{img/A-black}
-			\caption{Be fono}
-			\label{img:a-black-sign}
-			%https://www.kspvm.lm.lt/images/naujienos/2016-2017/kurciuju-filmuko-laimejimas/img/lt-gestu-abecele.jpg
-		\end{minipage}\hspace{\fill}%
+	\begin{minipage}{.3\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{img/A-black}
+		\caption{Be fono}
+		\label{img:a-black-sign}
+		%https://www.kspvm.lm.lt/images/naujienos/2016-2017/kurciuju-filmuko-laimejimas/img/lt-gestu-abecele.jpg
+	\end{minipage}\hspace{\fill}%
 	\begin{minipage}{.3\textwidth}
 		\centering
 		\includegraphics[width=.8\linewidth]{img/A-white}
@@ -243,7 +246,6 @@ Po šių žinsnių turime matricą, kuriose keičiasi spalva. dabar išimti tuos
 Ieškant kontūro taip pat atmetame ir tuos kontūrus, kurie, pavyzdžiui, neužima daugiau nei 5\% viso ploto ir nubrėžiame kontūrą.
 
 Kitas žingsnis paversti kadrą į kompiuteriui suprantamą kalbą ir kuo paprastesnę. Turėdami kontūrus, galime kadrą paversti į dvispalvį kadrą, kur viskas, kas yra kontūre bus baltos spalvos, o viskas kas už kontūro - juodos. Tam reiktų pasidaryti kaukę (\textit{angl. mask}), kurioje viskas, kas už kontūro ribų bus juodos spalvos (žr. \ref{img:a-black-sign} pav.), o paskui ištrinti tai, kas yra kontūre ir padaryti baltos spalvos (žr. \ref{img:a-white-sign} pav.).
-
 
 \subsection{Kadro atidavimas savaime apsimokančioms sistemoms}
 Savaime apsimokančios sistemos, tokios kaip \textit{sklearn} konvertuoja jau apdorotą kadrą į matricą, kur juoda - 0, o balta - 255. Tuomet ši matrica yra „suplokštinama“ ir gauname masyvą. Galiausiai šiuos duomenis sudeda į failą, kad vėliau jais būtų galima pasinaudoti.
