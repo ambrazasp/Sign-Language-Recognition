@@ -1,0 +1,83 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {lithuanian}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Įvadas}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.}Teorija}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.}Savaime apsimokančios sistemos}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.}Neuroniniai tinklai}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.1.}Dirbtiniai neuroniniai tinklai}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.2.}Rekurentiniai neuroniniai tinklai}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.}Gestų kalba}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.}Gestų kalbos skirstymas}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.}Gestų kalbos atpažininimas}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.1.}Problematika}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.}Sistemos apmokymas}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.}Sobel valdiklis}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.}Kadro atidavimas savaime apsimokančioms sistemoms}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.}Gestų kalbos statinių ženklų atpažinimas}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.}Atpažinimas naudojant gestų nuotraukas}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.}Atpažinimas naudojant internetinę kamerą}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.}Gestų kalbos dinaminių ženklų atpažinimas}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.}Pagrindinė tiriamoji dalis}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.}Poskyris}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.1.1.}Skirsnis}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {6.1.1.1.}Straipsnis}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.1.2.}Skirsnis}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.}Skyrius}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.}Poskyris}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.}Poskyris}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Išvados}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Literatūra}{14}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {lithuanian}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {lithuanian}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {lithuanian}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {lithuanian}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {lithuanian}
+\defcounter {refsection}{0}\relax 
+\def \@dotsep {1000}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Priedas Nr.1}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Priedas Nr.2}{}
