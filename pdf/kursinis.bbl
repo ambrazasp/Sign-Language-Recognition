@@ -59,6 +59,25 @@
       \field{title}{Neural Networks and Learning Machines}
       \field{year}{2009}
     \endentry
+    \entry{GUL}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ce61657675311d006e08699171131f27}{%
+           family={Harrington},
+           family_i={H\bibinitperiod},
+           given={Tom},
+           given_i={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce61657675311d006e08699171131f27}
+      \strng{fullhash}{ce61657675311d006e08699171131f27}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://libguides.gallaudet.edu/content.php?pid=114804&sid=991835/}}
+      \field{note}{45 KB, atnaujinta 2016-07}
+      \field{title}{ASL: Ranking and number of users}
+      \field{year}{2004}
+    \endentry
     \entry{WhoInt}{misc}{}
       \name{author}{1}{}{%
         {{hash=07025dc7a22c08e61d41e77563b30557}{%
@@ -97,17 +116,6 @@
       \field{title}{Artificial Intelligence - Neural Networks}
     \endentry
   \endsortlist
-  \missing{PvzMagistrLt}
-  \missing{PvzKonfEn}
-  \missing{PvzPhdEn}
-  \missing{remiantis United States Census Bureau’s data from the 2009-2013 American Community Survey}
-  \missing{PvzKnygLt}
-  \missing{PvzStraipsnEn}
-  \missing{PvzStraipsnLt}
-  \missing{PvzElPubLt}
-  \missing{PvzKnygEn}
-  \missing{PvzElPubEn}
-  \missing{PvzKonfLt}
 \endrefsection
 \endinput
 
