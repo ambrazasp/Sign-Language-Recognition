@@ -18,15 +18,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.}Gestų kalbos skirstymas}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.}Gestų kalbos atpažininimas}{6}
+\contentsline {subsection}{\numberline {2.2.}Problematika}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1.}Problematika}{6}
+\contentsline {subsubsection}{\numberline {2.2.1.}Statinių ženklų problematika}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.2.}Dinaminių ženklų problematika}{7}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.}Sistemos apmokymas}{8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.}Kadro apdorojimas naudojant Sobel valdiklį}{8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.}Apsimokančių sistemų apmokymas iš kadro}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.1.}Logistic Regresion}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.2.}LinearSVC}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.3.}KNeighborsClassifier}{9}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.}Gestų kalbos statinių ženklų atpažinimas}{10}
 \defcounter {refsection}{0}\relax 
