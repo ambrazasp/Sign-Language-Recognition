@@ -33,7 +33,7 @@ def main():
                 frame_flattened = frame.flatten()
                 classifier_model = joblib.load(model_serialized_path)
                 predicted_labels = classifier_model.predict(frame_flattened)
-                predicted_label = predicted_labels[0]
+                print(predicted_labels)
                 print("Predicted label = {}".format(predicted_label))
 
                 if image_label != predicted_label:

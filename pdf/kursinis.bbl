@@ -97,25 +97,8 @@
       \field{title}{Deafness and hearing loss}
       \field{year}{2017}
     \endentry
-    \entry{ArtificialNeuralNetwork}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=17c630bba78b078e4e4b5966c913d7a6}{%
-           family={Point},
-           family_i={P\bibinitperiod},
-           given={Tutorials},
-           given_i={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{17c630bba78b078e4e4b5966c913d7a6}
-      \strng{fullhash}{17c630bba78b078e4e4b5966c913d7a6}
-      \field{sortinit}{P}
-      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_neural_networks.htm/}}
-      \field{langid}{english}
-      \field{title}{Artificial Intelligence - Neural Networks}
-    \endentry
   \endsortlist
+  \missing{ArtificialNeuralNetwork}
 \endrefsection
 \endinput
 

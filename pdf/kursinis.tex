@@ -6,12 +6,13 @@
 \usepackage{amsmath}
 \usepackage{bm}
 \usepackage{color}
+\usepackage{tikz}
 \usepackage{enumitem}
 % \usepackage{hyperref}  % Nuorodų aktyvavimas
 \usepackage{url}
 
-\setenumerate{itemsep=0pt,parsep=0pt}
-\setitemize{itemsep=0pt,parsep=0pt}
+\setenumerate{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
+\setitemize{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
 
 % Titulinio aprašas
 \university{Vilniaus universitetas}
@@ -35,9 +36,9 @@
 \tableofcontents
 
 \sectionnonum{Įvadas}
-Daugiau nei 360 milijonų žmonių pasaulyje kenčia dėl klausos ir kalbos įvairių problemų, o daugiau nei 32 milijonai jų yra vaikai ir šis skaičius vis auga \cite{WhoInt}. Gestų kalba yra pagrindinis šių žmonių bendravimo įrankis. Tačiau reiktų pastebėti ir tai, jog dalis jų moka skaityti iš lūpų. Norint žmogui be šių ydų bendrauti su gestakalbiu (\textit{gestų kalba kalbantis žmogus}) reikia vertėjo, kuris išverstų gestų kalbą į įprastinę ir atvirkščiai.
+Daugiau nei 360 milijonų žmonių pasaulyje kenčia dėl klausos ir kalbos įvairių problemų, o daugiau nei 32 milijonai jų yra vaikai ir šis skaičius vis auga \cite{WhoInt}. Gestų kalba yra pagrindinis šių žmonių bendravimo įrankis. Tačiau reiktų pastebėti ir tai, jog dalis jų moka dalinai skaityti iš lūpų. Norint žmogui be šių ydų bendrauti su gestakalbiu (\textit{gestų kalba kalbantis žmogus}) reikia vertėjo, kuris išverstų gestų kalbą į įprastinę ir atvirkščiai.
 
-Kiekviena pasaulyje esanti kalba turi ir savo gestų kalbą.Tai reiškia, skiriasi tiek gestų kalbos gramatika, tiek netgi patys gestai. Pasaulyje randama net dialektų pagal regionus, ne tik pagal šalis. Amerikiečių anglų gestų kalba (\textit{toliau - ASL}) šnekančių žmonių pasaulyje priskaičiuojam nuo 500 tūkstančių iki netgi 2 milijonų vien tik Jungtinėse amerikos valstijose. Remiantis Census Bereau surinktais duomenimis, kuris domisi kalbų mažumomis, ASL yra pirmoji mažumos kalba, po „didžioje ketverto“, kurį sudaro ispanų, italų, vokiečių ir prancūzų kalbos \cite{GUL}. Tad netgi bendraujant dviem žmonėms, mokantiems gestų kalbą neretai iškyla vertimo problema, todėl tenka ieškoti gestų vertimų. Paiešką šiuo metu galima atlikti atsižvelgiant į delno padėtį, vienos ar abiejų rankų judesį, jų padėtį ir gestą atliekančių rankų skaičių. Tuomet pagal gesto išvaizdos nuotraukas ar kartais net vaizdo įrašus, gestakalbiai gali išsiversti gestus. Tam yra skirtos tiek internetinės svetainės - žodynai, tiek įvairūs rašytiniai žodynai.
+Kiekviena pasaulyje esanti kalba turi ir savo gestų kalbą. Tai reiškia, skiriasi tiek gestų kalbos gramatika, tiek netgi patys gestai. Pasaulyje randama net dialektų pagal regionus, ne tik pagal šalis. Amerikiečių anglų gestų kalba (\textit{toliau - ASL}) šnekančių žmonių pasaulyje priskaičiuojam nuo 500 tūkstančių iki netgi 2 milijonų vien tik Jungtinėse amerikos valstijose. Remiantis Census Bereau surinktais duomenimis, kuris domisi kalbų mažumomis, ASL yra pirmoji mažumos kalba, po „didžioje ketverto“, kurį sudaro ispanų, italų, vokiečių ir prancūzų kalbos \cite{GUL}. Tad netgi bendraujant dviem žmonėms, mokantiems gestų kalbą neretai iškyla vertimo problema, todėl tenka ieškoti gestų vertimų. Paiešką šiuo metu galima atlikti atsižvelgiant į delno padėtį, vienos ar abiejų rankų judesį, jų padėtį ir gestą atliekančių rankų skaičių. Tuomet pagal gesto išvaizdos nuotraukas ar kartais net vaizdo įrašus, gestakalbiai gali išsiversti gestus. Tam yra skirtos tiek internetinės svetainės - žodynai, tiek įvairūs rašytiniai žodynai.
 
 Šio tyrimo tikslas - ištirti ir išanalizuoti galimybes internetinės kameros pagalba versti gestų kalbą. Taip padedant ne tik gestakalbiams tarpusavyje, bet ir žmonėms, nesuprantantiems gestų kalbos bendrauti su gestakalbiais tam pasitelkiant technologijas, taip suteikiant šiems žmonėms pilnavertį gyvenimą bendraujant su kitais. Šiuo tyrimu siekiama apžvelgti ir įvertinti ar naudojantis įprasta internetine kamera įmanoma paversti gestų kalbą rašytiniu tekstu ar net garsine kalba ir lygiai taip pat versti rašytinę ar garsinę kalbą į gestų kalbą. Taip pat siekiama, kad vėliau būtų sukurtas visiems gestakalbiams prieinamas produktas ar programinė įranga, kurią kiekvienas įsidiegęs į savo įrenginį - kompiuterį, mobilųjį telefoną ar planšetinį kompiuterį galėtų naudotis šiuo vertėju. Vėliau tai galėtų tapti ir mokomąja gestų kalbos priemone. 
 
@@ -52,8 +53,15 @@ Kiekviena pasaulyje esanti kalba turi ir savo gestų kalbą.Tai reiškia, skiria
 	\item Savaime apsimokančių sistemų biblioteka scikit-learn;
 \end{enumerate}
 
-\subsectionnonum{Analizės tvarka}
-Šiame darbe bus nagrinėjamos amerikiečių ir lietuvių gestų kalbos.
+\subsectionnonum{Tyrimo eiga}
+Šiame darbe bus nagrinėjamos amerikiečių anglų ir lietuvių gestų kalbos.
+\begin{enumerate}
+	\item Susipažinimas su gestų kalba ir jos problematika
+	\item Sistemos apmokymas atpažinti gestus
+	\item Gestų kalbos statinių ženklų atpažinimas
+	\item Gestų kalbos dinaminių ženklų atpažinimas
+\end{enumerate}
+
 %Įvade apibūdinamas darbo tikslas, temos aktualumas ir siekiami rezultatai.
 %Darbo įvadas neturi būti dėstymo santrauka. Įvado apimtis 1–2 puslapiai.
 
@@ -76,27 +84,56 @@ Vienas neuronas priima informaciją per dendritus, tuomet pats neuronas nusprend
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.5\linewidth]{img/neuron-structure}
-	\caption{Neuroninio tinklo struktūra \cite{ArtificialNeuralNetwork}}
+	\caption[]{Neuroninio tinklo struktūra\footnotemark}
 	\label{img:neuron_structure}
 	%https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_neural_networks.htm
 \end{figure}
+\footnotetext{\url{https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_neural_networks.htm/}}
 
-
-Remiantis šiais principais buvo sukurti dirbtiniai neuroniniai  tinklai.
+Remiantis šiais principais buvo sukurti dirbtiniai neuroniniai tinklai.
 
 
 \subsubsection{Dirbtiniai neuroniniai tinklai}
 \textbf{Dirbtinis neuroninis tinklas} (\textit{angl. Artificial neural network}) - struktūra, skirta apdoroti dideliam kiekiui informacijos, sukurta rementis žmogaus nervų sistemos veikimo principu. Kitais žodžiais tariant, skaitmenizuota žmogaus smegenų veikla.
 
-Neuronai dirbtiniame neuroniniame tinkle yra sujungti jungtimis. Taip jie tarpusavyje komunikuoja perduodami vienas kitam informaciją. Kiekvienas neuronas gali priimti atėjusią informaciją, ją apdoroti ir perduoti kitam neuronui. Kiekviena jungtis turi savo svorį, pagal kurį pasirenkama, į kurį neuroną turi būti perduodama informacija. Šių jungčių svorius galime nustatyti arba apmokyti naudodamiesi apsimokančių sistemų pagalba. 
+Neuronai dirbtiniame neuroniniame tinkle yra sujungti jungtimis. Taip jie tarpusavyje komunikuoja perduodami vienas kitam informaciją. Kiekvienas neuronas gali priimti atėjusią informaciją, ją apdoroti ir perduoti kitam neuronui. Kiekviena jungtis turi savo svorį, pagal kurį pasirenkama, į kurį neuroną turi būti perduodama informacija. Šių jungčių svorius galime įvertinti naudodamiesi apsimokančių sistemų pagalba. 
 
-\ref{img:ann} pav. pateikiama paprasta schema, kaip veikia dirbtiniai neuroniniai tinklai:
+\ref{tikz:ann} pav. pateikiama paprasta schema, kaip veikia dirbtiniai neuroniniai tinklai:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.4\linewidth]{img/ann}
-	\caption{Dirbtinio neuroninio tinklo struktūra \cite{ArtificialNeuralNetwork}}
-	\label{img:ann}
+	\tikzset{%
+		every neuron/.style={
+			circle,
+			draw,
+			minimum size=1cm
+		},
+	}
+	
+	\begin{tikzpicture}[x=1.5cm, y=1.5cm, >=stealth]
+	\centering
+	
+	\foreach \m/\l [count=\y] in {1,2,3}
+	\node [every neuron/.try, neuron \m/.try] (input-\m) at (0,1.9-\y) {};
+	
+	\foreach \m [count=\y] in {1,2,3,4}
+	\node [every neuron/.try, neuron \m/.try ] (hidden-\m) at (2,2.5-\y) {};
+	
+	\foreach \m [count=\y] in {1,2}
+	\node [every neuron/.try, neuron \m/.try ] (output-\m) at (4,2.3-\y*1.6) {};
+	
+	\foreach \i in {1,...,3}
+	\foreach \j in {1,...,4}
+	\draw [->] (input-\i) -- (hidden-\j);
+	
+	\foreach \i in {1,...,4}
+	\foreach \j in {1,...,2}
+	\draw [->] (hidden-\i) -- (output-\j);
+	
+	\foreach \l [count=\x from 0] in {Įeiga, Tarpiniai, Išeiga}
+	\node [align=center, above] at (\x*2,2) {\l};
+	
+	\end{tikzpicture}
 \end{figure}
 
 
@@ -106,9 +143,10 @@ Neuronai dirbtiniame neuroniniame tinkle yra sujungti jungtimis. Taip jie tarpus
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.8\linewidth]{img/rnn}
-	\caption{Rekurentinių neuroninių tinklų schema \cite{RecurrentNeuralNetwork}}
+	\caption[]{Rekurentinių neuroninių tinklų schema\footnotemark}
 	\label{img:rnn}
 \end{figure}
+\footnotetext{\url{http://colah.github.io/posts/2015-08-Understanding-LSTMs/}}
 \begin{itemize}
 	\item \textit{x\textsubscript{t}} - įeiga momentu \textit{t}
 	\item \textit{h\textsubscript{t}} - išeiga momentu \textit{t}	
@@ -127,19 +165,20 @@ Gestų kalba susideda iš dviejų dalių - statinių ir dinaminių ženklų. Ges
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[width=.8\linewidth]{img/asl_alphabet}
-		\caption{Amerikiečių gestų kalbos abėcėlė}
+		\caption[a]{Amerikiečių gestų kalbos abėcėlė\footnotemark}
 		\label{img:asl_alphabet}
 		%http://lifeprint.com/asl101/topics/wallpaper1.htm
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[width=.5\linewidth]{img/lsl_alphabet}
-		\caption{Lietuvių gestų kalbos abėcėlė}
+		\caption[b]{Lietuvių gestų kalbos abėcėlė\footnotemark}
 		\label{img:lsl_alphabet}
 		%https://www.kspvm.lm.lt/images/naujienos/2016-2017/kurciuju-filmuko-laimejimas/img/lt-gestu-abecele.jpg
 	\end{minipage}
 \end{figure}
-
+\footnotetext{\url{http://lifeprint.com/asl101/topics/wallpaper1.htm}}
+\footnotetext{\url{http://gestai.ndt.lt/pirstu-abecele}}
 \subsection{Problematika}
 Norint atpažinti gestus, paversti juos į raides, žodžius ar sakinius susiduriama su problemomis, kurios susijusios tiek su statinių, tiek su dinaminių gestų atpažinimu.
 
@@ -165,12 +204,12 @@ Norint, jog sistema atpažintų gestus, svarbiausia ją apmokyti ką reiškia ta
 
 Imkime, jog nuotrauka yra sudaryta iš \textit{n * m} taškų (\textit{angl. pixels}). Reikia, jog sistema atskirtų, kurioje kadro vietoje yra rodomo gesto dalis, kurioje tik pašalinis fonas.
 
-Apmokymui toliau aptarsime Sobel valdiklį, savaime apsimokančių sistemų metodus ir duomenų surinkimą 
+Apmokymui toliau aptarsime Sobel branduolį, savaime apsimokančių sistemų metodus ir duomenų surinkimą 
 
-\subsection{Kadro apdorojimas naudojant Sobel valdiklį}
-\textbf{Sobel valdiklis} (\textit{angl. Sobel operator}) - vaizdų apdorojimo algoritmas, skirtas skirtas paversti kadrą į kontūrų žemėlapį.
+\subsection{Kadro apdorojimas naudojant Sobel branduolį}
+\textbf{Sobel branduolys} (\textit{angl. Sobel operator}) - vaizdų apdorojimo algoritmas, skirtas skirtas paversti kadrą į kontūrų žemėlapį.
 
-Šis valdiklis naudojasi šiomis funkcijomis, kad konvertuotų vaizdą į kontūrus:
+Šis branduolys naudojasi šiomis funkcijomis, kad konvertuotų vaizdą į kontūrus:
 
 \begin{equation}\label{eq:sobelgx}
 	G_x = 
@@ -249,17 +288,82 @@ Toliau, atiduodant kadrą Sobel funkcijoms, kadras yra konvertuojamas į skaiči
 	\item Apskaičiuojame dabartinio taško tikrąją reiškę taikydami \ref{eq:sobelg} formulę. Gauname tokį vaizdą - žr. \ref{img:a-sobel} pav.
 \end{enumerate}
 
-Po šių žinsnių turime matricą, kuriose keičiasi spalva. dabar išimti tuos taškus, kurie yra, pavyzdžiui, ta pati balta spalva, tik kitokio atspalvio? O gi imame ir susižinome matricos vidurkį ir atmetame visus taškus, kurie yra mažesni už vidurkį. Kitaip tariant, išimame mažo skirtumo taškus. Taip gauname, jog lieka tik tie taškai, kurie jau turėtų priklausyti gesto kontūrui. 
+Po šių žinsnių turime matricą taškų, kuriose keičiasi spalva. Dabar reikia išimti tuos taškus, kurie yra, pavyzdžiui, ta pati balta spalva, tik kitokio atspalvio. Tam, kad tai padarytume, imame ir susižinome matricos vidurkį ir atmetame visus taškus, kurie yra mažesni už vidurkį. Kitaip tariant, išimame mažo skirtumo taškus. Taip gauname, jog lieka tik tie taškai, kurie jau turėtų priklausyti gesto kontūrui.
 
 Ieškant kontūro taip pat atmetame ir tuos kontūrus, kurie, pavyzdžiui, neužima daugiau nei 5\% viso ploto ir nubrėžiame kontūrą.
 
-Kitas žingsnis paversti kadrą į kompiuteriui suprantamą kalbą ir kuo paprastesnę. Turėdami kontūrus, galime kadrą paversti į dvispalvį kadrą, kur viskas, kas yra kontūre bus baltos spalvos, o viskas kas už kontūro - juodos. Tam reiktų pasidaryti kaukę (\textit{angl. mask}), kurioje viskas, kas už kontūro ribų bus juodos spalvos (\textit{žr. \ref{img:a-black-sign} pav.}), o paskui ištrinti tai, kas yra kontūre ir padaryti baltos spalvos (\textit{žr. \ref{img:a-white-sign} pav.}).
+Kitas žingsnis paversti kadrą į kompiuteriui suprantamą ir kuo paprastesnę kalbą. Turėdami kontūrus, galime kadrą paversti į dvispalvį kadrą, kur viskas, kas yra kontūre bus baltos spalvos, o viskas kas už kontūro - juodos. Tam reiktų pasidaryti kaukę (\textit{angl. mask}), kurioje viskas, kas už kontūro ribų bus juodos spalvos, tai kas mūsų atveju yra fonas (\textit{žr. \ref{img:a-black-sign} pav.}), o paskui ištrinti tai, kas yra kontūre ir padaryti baltos spalvos, tai kas mūsų atveju bus ženklas (\textit{žr. \ref{img:a-white-sign} pav.}).
+
+Paskutinis žingsnis, prieš apmokant modelį, reikia kadrą paversti duomenimis, iš kurių modelis galėtų mokytis. Šioje vietoje buvo pasirinktas plačiausiai naudojamas metodas - kadrą paversti į skaičių matricą, kur balta spalva atitinka 255, o juoda - 0. Ši konvertacija pasirinkta pagal spalvų kodus. Jau pavertus kadrą į skaičių matricą, suplokštiname ją, kad gautume vienmatę matricą. Ir galiausiai į vieną bendrą duomenų rinkmeną (\textit{angl. file}) surašome duomenis tokia seka - pirmas eilutės langelis - raidė, visi likę šios eilutės langeliai užpildomi vienmatės kadro matricos duomenis.
 
 \subsection{Apsimokančių sistemų apmokymas iš kadro}
-Savaime apsimokančios sistemos, tokios kaip \textit{sklearn} konvertuoja jau apdorotą kadrą į matricą, kur juoda - 0, o balta - 255. Tuomet ši matrica yra „suplokštinama“ ir gauname masyvą. Galiausiai šiuos duomenis sudeda į failą, kad vėliau jais būtų galima pasinaudoti.
-\subsubsection{Logistic Regresion}
-\subsubsection{LinearSVC}
-\subsubsection{KNeighborsClassifier}
+Turėdami rinkmeną, kurioje yra surašyti visi apmokymams skirtų kadrų duomenys, aptarsime, kaip iš šių duomenų apmokyti sistemą.
+
+\subsubsection{Kitos technikos}
+Šiame poskyryje aptarsime keletą objektams atpažinti populiarių technikų, kuriomis remiantis galime apmokyti sistemą atpažinti gestus.
+
+Aptarsime visas technikas pasinaudodami ASL abėcėlės aibe, kurioje yra 24 statiniai gestai.
+
+\begin{equation}\label{eq:z}
+	z = \theta_0+\theta_1x_1+\theta_2x_2+\theta_3x_1^2+\theta_4x_1x_2+...
+\end{equation}
+
+\ref{eq:z} formulė apibrėžia, kaip bus apskaičiuojamas parametras \textit{z}, kai norima susidaryti pasirinktos formos plotą, pagal kurį gestas priklausys arba nepriklausys išmoktai abėcėlės raidei.
+
+\subsubsubsection{Logistic Regression}
+
+Vienas populiariausių šiuo metu naudojamų klasifikavimo algoritmų.
+
+\begin{equation}\label{eq:lr1}
+	0 \leq h_\theta^i(x) \leq 1; i = 1, 2, ..., 24
+\end{equation}
+
+Remiantis \ref{eq:lr1} formule, apsibrėžiama, jog tikimybės kiekvienai raidei bus ne mažesnės nei 0 ir ne didesnės nei 1, o \textit{i} pasako kelintą raidę tyrinėjame, kur, tarkime, A = 1, B = 2, ir t.t.
+
+\begin{equation}\label{eq:lr2}
+	h_\theta^i(x) = P(y=i | x; \theta)
+\end{equation}
+
+Remiantis \ref{eq:lr2} formule, apsibrėžiame tikimybės formulę, kuriai kaip parametrą paduodame gesto numerį (tarkime, kad raidė A = 1, B = 2 ir t.t.), bei bus naudojamasi parametrais $\theta$, kur  $\theta$ - svorių vertės, kuriomis remiantis apskaičiuojama tikimybė P. $\theta$ reikšmes savaime apsimokančios sistemos apsiskaičiuoja skirtingais algoritmais, todėl šiame darbe jie nagrinėjami nebus.
+
+\begin{equation}\label{eq:lr3}
+	h_\theta(x)= g(z)
+\end{equation}
+
+
+Remiantis \ref{eq:lr3} formule, galime apsibrėžti ne tik tiesės atskyrimą, kur gestas grąžins tikimybę didesnę už 0,5, kur ne, ne tik tiese atskirtus sprendinius, bet ir įvairias formas. Todėl tokiu atveju galima netgi apsibrėžti rankos formą. \textit{x\textsubscript{1}} ir \textit{x\textsubscript{2}} yra koordinačių ašys, kuriose yra išsidėstę taškai.
+
+\begin{equation}\label{eq:lr4}
+	h_\theta(x) = \frac{1}{1+e^{-z}}
+\end{equation}
+
+Galiausiai, \ref{eq:lr4} formulėje galime matyti, jog tikimybė yra apskaičiuojama remiantis \ref{eq:lr3} formulėje apsibrėžtos formos pavidalu.
+
+\subsubsubsection{Linear Support Vector Machine}
+
+Iš esamų duomenų aibės taškų, šiuo atveju skirtingų gestų raidžių taškų, yra sudaroma matrica, kurioje tarp skirtingų gestų yra nubrėžiamas vektorius, kuris nusako, kurioje vietoje bus traktuojamas vienas gestas, kurioje - kitas. Iki vektoriaus yra parenkamas didžiausias galimas atstumas nuo artimiausių prie vektoriaus esančių duomenų taškų. 
+
+Pats principas $\theta$ parinkimui yra labai panašus ir \textit{z} yra paskaičiuojama pagal tą pačią formulę.
+
+Šis metodas yra geresnis, kai yra ganėtinai didelis skirtumas tarp duomenų aibės taškų ir lengvai nubrėžiami vektoriai, nes nesikerta duomenų aibės. Dar vienas šio metodo privalumas yra tas, jog nubrėžus vektorių esant didžiausiam atstumui tarp duomenų taškų, esančių arčiausiai vektoriaus, ganėtinai nesunkiai yra nustatoma, kuriai pusei (šiuo atveju gestui), priklauso duotasis taškas.
+
+Tačiau iš kitos pusės, šis metodas nėra ypač lengvai apdorojantis duomenis, jei duomenų aibės yra persidengiančios.
+
+\subsubsubsection{k-nearest neighbors}
+Viskas yra suskirstoma į aibes ir pagal tašką ieškomas artimiausias kaimynas arba kaimynų aibė ir priklausomai nuo to, kurių kaimynų daugiausia, pagal tai parenkama reikšmė.
+
+
+\textbf{Privalumai:}
+\begin{itemize}
+	\item 
+\end{itemize}
+\textbf{Trūkumai:}
+\begin{itemize}
+	\item Sudėtingumas ieškant artimiausių kaimynų kiekvienam taškui
+\end{itemize}
+
+
+\subsubsection{Sukurtas modelis}
 
 
 \section{Gestų kalbos statinių ženklų atpažinimas}

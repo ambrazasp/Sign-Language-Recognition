@@ -2055,12 +2055,6 @@
     <bcf:citekey order="1">WhoInt</bcf:citekey>
     <bcf:citekey order="2">GUL</bcf:citekey>
     <bcf:citekey order="3">Hay09</bcf:citekey>
-    <bcf:citekey order="4">ArtificialNeuralNetwork</bcf:citekey>
-    <bcf:citekey order="5">ArtificialNeuralNetwork</bcf:citekey>
-    <bcf:citekey order="6">ArtificialNeuralNetwork</bcf:citekey>
-    <bcf:citekey order="7">ArtificialNeuralNetwork</bcf:citekey>
-    <bcf:citekey order="8">RecurrentNeuralNetwork</bcf:citekey>
-    <bcf:citekey order="9">RecurrentNeuralNetwork</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="anyt/global" type="entry" sortscheme="anyt" sortnamekeyscheme="global">
   <bcf:sorting>

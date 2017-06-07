@@ -1,5 +1,2 @@
-../data/images/test/5.png	test
-../data/images/test/2.png	test
-../data/images/test/1.png	test
-../data/images/test/4.png	test
-../data/images/test/3.png	test
+../data/images/test/006.jpg	test
+../data/images/test/007.jpg	test
