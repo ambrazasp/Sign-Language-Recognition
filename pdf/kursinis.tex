@@ -98,7 +98,7 @@ Remiantis šiais principais buvo sukurti dirbtiniai neuroniniai tinklai.
 
 Neuronai dirbtiniame neuroniniame tinkle yra sujungti jungtimis. Taip jie tarpusavyje komunikuoja perduodami vienas kitam informaciją. Kiekvienas neuronas gali priimti atėjusią informaciją, ją apdoroti ir perduoti kitam neuronui. Kiekviena jungtis turi savo svorį, pagal kurį pasirenkama, į kurį neuroną turi būti perduodama informacija. Šių jungčių svorius galime įvertinti naudodamiesi apsimokančių sistemų pagalba. 
 
-\ref{tikz:ann} pav. pateikiama paprasta schema, kaip veikia dirbtiniai neuroniniai tinklai:
+\ref{fig:ann} pav. pateikiama paprasta schema, kaip veikia dirbtiniai neuroniniai tinklai:
 
 \begin{figure}[H]
 	\centering
@@ -130,15 +130,29 @@ Neuronai dirbtiniame neuroniniame tinkle yra sujungti jungtimis. Taip jie tarpus
 	\foreach \j in {1,...,2}
 	\draw [->] (hidden-\i) -- (output-\j);
 	
-	\foreach \l [count=\x from 0] in {Įeiga, Tarpiniai, Išeiga}
-	\node [align=center, above] at (\x*2,2) {\l};
-	
+	\foreach \l [count=\x from 0] in {Įeigos, Paslėptasis, Išeigos}
+	\node [align=center, above] at (\x*2,2) {\l \\ sluoksnis};
 	\end{tikzpicture}
+	\caption{Dirbtinio neuroninio tinklo pavyzdys} \label{fig:ann}
 \end{figure}
+
+\subsubsection{Konvoliuciniai neuroniniai tinklai}
+\textbf{Konvoliuciniai neuroniniai tinklai} (\textit{angl. Convolutional neural network}) (\textit{toliau - KNT}) - specilios rūšies „Feed-forward“ neuroniniai tinklai, kurie reamiasi tuo pačiu dirbtinių neuroninių tinklų (\textit{žr. \ref{fig:ann} pav.}) principu. Šie tiklai yra skirti atpažinti objektus. Apmokant KNT, pagrindinis principas, kaip ir raktinis šių tinklų žodis, yra konvoliucija. Tai tarsi filtrai, kurie išskaido kadrą į dalis, pritaiko įvairius filtrus ir gliausiai randa pasikartojančius įvairiuose kadruose esančius požymius. Tokius kaip, ratas, langai ar pan., o šio tyrimo atveju - rankos, jų padėtis ir kt.
+
+Šiame tyrime, bus naudojamasi ReLU principu, nes konvoliuciniai neuroniniai tinklai, kurie remiasi ReLU principu yra kelis kartus greitesni, nei tie, kurie remiasi kitais principais, pavyzdžiui, tanh \cite{NIPS2012_4824}. Kuomet kadrui yra pritaikoma konvoliucija (sudauginami visi kadro taškai su konvoliucine matrica), pritaikomas ReLU principas visus neigiamus skaičius paverčia į 0. Telkimo (\textit{angl. pooling}) fazėje, kadras yra sumažinamas (\textit{žr. \ref{img:cnn} pav.})
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.8\linewidth]{img/cnn}
+	\caption[]{Konvoliucinių neuroninių tinklų schema\footnotemark}
+	\label{img:cnn}
+\end{figure}
+\footnotetext{\url{http://yann.lecun.com/exdb/lenet/}}
 
 
 \subsubsection{Rekurentiniai neuroniniai tinklai}
 \textbf{Rekurentiniai neuroniniai tinklai} (\textit{angl. Recurrent neural network}) - tai dirbtinis neuroninis tinklas, kuris saugo informaciją apie praeituose žingsniuose (neuronuose) atliktus veiksmus ar skaičiavimus.
+
 
 \begin{figure}[H]
 	\centering
@@ -154,11 +168,10 @@ Neuronai dirbtiniame neuroniniame tinkle yra sujungti jungtimis. Taip jie tarpus
 \end{itemize}
 
 
-
-
 \section{Gestų kalba}
 \subsection{Gestų kalbos skirstymas}
 Gestų kalba susideda iš dviejų dalių - statinių ir dinaminių ženklų. Gestų kalboje kiekviena kalba turi savo abėcėlę. Statiniais ženklais atvaizduojama didžioji abėcėlių raidžių dalis. O dinaminiais - žodžiai ir kai kurios gestų abėcėlių raidės. \textit{Pavyzdžiui}, amerikiečių gestų kalbos abėcėlėje J ir Z raidės atvaizduojamos dinaminiais judesiais (\textit{žr. \ref{img:asl_alphabet} pav.}), o lietuvių - Ą, D, Į, K ir kt. bei jau minėtosios J ir Z raidės (\textit{žr. \ref{img:lsl_alphabet} pav.})
+
 
 \begin{figure}[H]
 	\centering
@@ -202,11 +215,18 @@ Pagrindinės problemos iškylančios atpažįstant dinaminius gestų kalbos žen
 \section{Sistemos apmokymas}
 Norint, jog sistema atpažintų gestus, svarbiausia ją apmokyti ką reiškia tam tikri gestai. Tam galime išnaudoti kadrus (\textit{angl. frame}) ir savaime apsimokančių sistemų galimybes. Tad reiktų imti vieną kadrą ir jį paversti į kompiuteriui suprantamą kalbą. 
 
-Imkime, jog nuotrauka yra sudaryta iš \textit{n * m} taškų (\textit{angl. pixels}). Reikia, jog sistema atskirtų, kurioje kadro vietoje yra rodomo gesto dalis, kurioje tik pašalinis fonas.
 
-Apmokymui toliau aptarsime Sobel branduolį, savaime apsimokančių sistemų metodus ir duomenų surinkimą 
+\subsection{Kadro transofrmacija}
+Kiekvienas kadras yra sudarytas iš \textit{h * w * c} taškų (\textit{angl. pixels}). Čia, \textit{h} - aukštis (\textit{angl. height}), \textit{w} - plotis (\textit{angl. width}), \textit{c} - spalva (\textit{angl. color}), susidedanti iš RGB spalvų paletės. RGB spalvų paletė - tai trijų - raudonos, žalios ir mėlynos - spalvų paletė, kuri yra ypatinga tuo, jog kiekviena spalva, kurią mato žmogus, susideda būtent iš šių trijų spalvų, varijuojant jų ryškumu. 0 - spalva nenaudojama, o 255 - spalva naudojama pilnai ryškiai. 
 
-\subsection{Kadro apdorojimas naudojant Sobel branduolį}
+Kiekvieną kadrą galima išskirti į šių trijų spalvų sluoksnius.
+\subsection{Sistemos apmokymas, naudojantis įprastinėmis sistemomis}
+\textbf{Kompiuterio vaizdų atpažinimo sistemos} (\textit{angl. computer vision}) - sistemos, kurias galima apmokyti atpažinti įvairius objektus, dar žinomos kaip \textit{CV}.
+
+Šiame poskyryje bus nagrinėjamos OpenCV atviro kodo (\textit{angl. open-source}) vaizdų atpažinimo esančios galimybės ir algoritmai.
+
+
+\subsubsection{Kadro apdorojimas naudojant Sobel branduolį}
 \textbf{Sobel branduolys} (\textit{angl. Sobel operator}) - vaizdų apdorojimo algoritmas, skirtas skirtas paversti kadrą į kontūrų žemėlapį.
 
 Šis branduolys naudojasi šiomis funkcijomis, kad konvertuotų vaizdą į kontūrus:
@@ -296,10 +316,9 @@ Kitas žingsnis paversti kadrą į kompiuteriui suprantamą ir kuo paprastesnę 
 
 Paskutinis žingsnis, prieš apmokant modelį, reikia kadrą paversti duomenimis, iš kurių modelis galėtų mokytis. Šioje vietoje buvo pasirinktas plačiausiai naudojamas metodas - kadrą paversti į skaičių matricą, kur balta spalva atitinka 255, o juoda - 0. Ši konvertacija pasirinkta pagal spalvų kodus. Jau pavertus kadrą į skaičių matricą, suplokštiname ją, kad gautume vienmatę matricą. Ir galiausiai į vieną bendrą duomenų rinkmeną (\textit{angl. file}) surašome duomenis tokia seka - pirmas eilutės langelis - raidė, visi likę šios eilutės langeliai užpildomi vienmatės kadro matricos duomenis.
 
-\subsection{Apsimokančių sistemų apmokymas iš kadro}
+\subsubsection{Apsimokančių sistemų apmokymas iš Sobel branduoliu apdoroto kadro}
 Turėdami rinkmeną, kurioje yra surašyti visi apmokymams skirtų kadrų duomenys, aptarsime, kaip iš šių duomenų apmokyti sistemą.
 
-\subsubsection{Kitos technikos}
 Šiame poskyryje aptarsime keletą objektams atpažinti populiarių technikų, kuriomis remiantis galime apmokyti sistemą atpažinti gestus.
 
 Aptarsime visas technikas pasinaudodami ASL abėcėlės aibe, kurioje yra 24 statiniai gestai.
@@ -353,20 +372,130 @@ Tačiau iš kitos pusės, šis metodas nėra ypač lengvai apdorojantis duomenis
 Viskas yra suskirstoma į aibes ir pagal tašką ieškomas artimiausias kaimynas arba kaimynų aibė ir priklausomai nuo to, kurių kaimynų daugiausia, pagal tai parenkama reikšmė.
 
 
-\textbf{Privalumai:}
-\begin{itemize}
-	\item 
-\end{itemize}
-\textbf{Trūkumai:}
-\begin{itemize}
-	\item Sudėtingumas ieškant artimiausių kaimynų kiekvienam taškui
-\end{itemize}
+\subsection{Sistemos apmokymas, naudojantis konvoliucinio neuroninio tinklo modeliu}
+
+Prieš apmokant sistemą, naudojantis konvoliucinio neuroninio tinklo modeliu, pirma aptarsime, kas yra konvoliucinis bei telkimo sluoksniai, o vėliau - kaip apmokyti sistemą.
+
+\subsubsection{Konvoliucinis sluoksnis}
+
+Sluoksnis, kuris pagal filtrą nusprendžia, kokią išeities matricą turėsime. Tarkime, jog turime filtrą kuris yra \textit{3 x 3} matrica. Kadrą, kaip jau buvo minėta anksčiau, galima iškirstyti į tris skirtingus sluoksnius - raudonos, žalio ir mėlynos spalvos. Pavertus šiuos sluoksnius skaičių matricomis, kur 0 - spalva nenaudojama, o 255 - spalva pilnai ryški, gauname, jog turime matricas, kurios nusako, kaip kiekviename taške ryškiai yra naudojama tam tikra spalva. 
+
+Einant taškas po taško per kadro kiekvienos spalvos matricą, imamos \textit{3 x 3} matricos, kurios yra sudauginamos su filtro matricomis. Taip gaunama matrica, kuria remantis bus galima išskirti savybes.
+
+\textit{Pavyzdys:}
+
+\begin{equation}\label{eq:convl}
+	\begin{bmatrix}
+	1 & 1 & 0 & 1 & 0 & 1 & 0 \\
+	1 & 0 & 1 & 1 & 1 & 0 & 1 \\
+	1 & 1 & 0 & 1 & 1 & 0 & 1 \\
+	1 & 1 & 0 & 1 & 0 & 1 & 0 \\
+	1 & 0 & 1 & 1 & 1 & 0 & 1 \\
+	1 & 1 & 0 & 1 & 1 & 0 & 1 \\
+	1 & 1 & 0 & 1 & 0 & 1 & 0
+	\end{bmatrix}
+	*
+	\begin{bmatrix}
+	1 & 0 & 1 \\
+	0 & 1 & 0 \\
+	1 & 0 & 1
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	1 & 3 & 1 & 3 & 1 & 3 & 0 \\
+	3 & 2 & 5 & 2 & 4 & 2 & 2 \\
+	2 & 4 & 3 & 3 & 3 & 2 & 2 \\
+	2 & 4 & 3 & 4 & 2 & 5 & 0 \\
+	3 & 2 & 5 & 2 & 4 & 2 & 2 \\
+	2 & 4 & 3 & 3 & 3 & 2 & 2 \\
+	3 & 2 & 2 & 2 & 1 & 3 & 0
+	\end{bmatrix}
+\end{equation}
+
+\ref{eq:convl} formulėje yra pateikiama \textit{7 x 7} matrica sudauginama su \textit{3 x 3} filtru. Panagrinėsime pirmos eilutės pirmąjį (\textit{žr. \ref{eq:convl1} formulę}) ir antrąjį (\textit{žr. \ref{eq:convl2} formulę}) narius. Pirmasis narys yra kampinis skaičius 1. Todėl jį dauginsime su filtro vidurinioju nariu. Kadangi dabar filtras „išlenda“ iš matricos rėmų, tai įsivaizduojame, kad yra kadro matricai rėmelis, kuris yra sudarytas iš 0. Pirmasis sandaugos narys - kadro matricos narys, antrasis - filtro matricos narys.
+
+\begin{equation}\label{eq:convl1}
+	0*1+0*0+0*1+0*0+1*1+1*0+0*1+1*0+0*1 = 1
+\end{equation}
 
 
-\subsubsection{Sukurtas modelis}
+\begin{equation}\label{eq:convl2}
+	0*1+0*0+0*1+1*0+1*1+0*0+1*1+0*0+1*1=3
+\end{equation}
 
+\subsubsection{Telkimo sluoksnis}
+
+Kaip buvo minėta anksčiau, telkimo sluoksnis yra skirtas sumažinti matricą arba kitais žodžiais tariant - kadrą. Kaip pavyzdį paimkime, jog mūsų telkimo sluoksnio filtro dydis \textit{3 x 3}. Taikysime maksimalaus telkimo principą, kuris nusako, jog paėmus matricos poaibį išrenkame didžiausią reikšmę.
+
+\textit{Pavyzdys:}
+\begin{equation}\label{eq:poll}
+	\begin{bmatrix}
+	1 & 3 & 1 & 3 & 1 & 3 \\
+	3 & 2 & 5 & 2 & 4 & 2 \\
+	2 & 4 & 3 & 3 & 3 & 2 \\
+	2 & 4 & 3 & 4 & 2 & 5 \\
+	3 & 2 & 5 & 2 & 4 & 2 \\
+	2 & 4 & 3 & 3 & 3 & 2
+	\end{bmatrix}
+	= 
+	\begin{bmatrix}
+	5 & 4 \\
+	5 & 5 
+	\end{bmatrix}
+\end{equation}
+\begin{equation}\label{eq:poll1}
+	max(
+	\begin{bmatrix}
+	1 & 3 & 1 \\
+	3 & 2 & 5 \\
+	2 & 4 & 3
+	\end{bmatrix}
+	) = 5
+	%1, 3, 1, 3, 2, 5, 2, 4, 3
+\end{equation}
+\begin{equation}\label{eq:poll2}
+	max(
+	\begin{bmatrix}
+	3 & 1 & 3 \\
+	2 & 4 & 2 \\
+	3 & 3 & 2
+	\end{bmatrix}
+	) = 4
+\end{equation}
+\ref{eq:poll} formulėje parodyta, kaip pritaikius \textit{3 x 3} telkimo filtrą gauname beveik 90\% mažesnę matricą. Imame filtro dydžio matricą, pradėdami nuo kairiojo viršutinio kampo. Tuomet iš tos matricos išrenkame didžiausią reikšmę (\textit{žr. \ref{eq:poll1} formulę}) ir į naująją matricą įrašome reikšmę. Tuomet, kadangi jau iš pirmosios \textit{3 x 3} matricos išrinkome didžiausią reikšmę, imame kitą į dešinę esančią matricą, kuri nepersidengia su pirmąja ir iš jos taip pat išrenkame didžiausią reikšmę (\textit{žr. \ref{eq:poll2} formulę}). Pritaikome filtrą ir likusioms matricos dalims. Jei filtras „užeina“ už kairiosios arba apatinės kadro ribų, interpretuojame, jog tose vietose yra 0.
+
+\subsubsection{Apmokymas naudojantis konvoliucinio neuroninio tinklo modeliu}
+\textbf{Keras} - giliojo mokymosi biblioteka, naudojama su Theano arba TensorFlow.
+
+\textbf{Theano} - Python biblioteka, skirta darbui su matematinėmis išraiškomis, jų optimizavimui, apibrėžimui, darbui su n-mačiais masyvais.
+
+
+Naudojantis Keru, sistema buvo apmokyta naudojantis konvoliucinio neuroninio tinklo modeliu. Tai buvo atlikta trimis etapais.
+
+Pasinaudota dvejomis duomenų aibėmis - pirmoji skirta mokymuisi (\textit{data/train}) ir antroji - pasitvirtinimui - validacijai (\textit{data/validation}).
+
+Buvo naudojamasi VGG16 (\textit{Visual Geometry Group}) architektūra (\textit{žr.\ref{img:vgg} pav.}) - konvoliucinių ir telkimo sluoksnių pasikartojančios grandinės. Telkimui naudojama \textit{2 x 2} matrica, o konvuliacijai - \textit{3 x 3} matrica.
+
+\subsubsubsection{Pirmasis etapas}
+Pirmame etape buvo pritaikytas duomenų dauginimo (\textit{angl. data augmentation}) principas iš duotųjų mokymuisi ir validacijai. Kiekvienam kadrui buvo pritaikytos įvairios modifikacijos apmokant - kadro priartinimas, pakreipimas, horizontalus apvertimas.
+
+%VGG16 achitektūros žingsniai:
+%\begin{enumerate}
+%	\item Konvuliacija, konvuliacija, telkimas
+%	\item Konvuliacija, konvuliacija, telkimas
+%	\item Konvuliacija, konvuliacija, konvuliacija, telkimas
+%	\item Konvuliacija, konvuliacija, konvuliacija, telkimas
+%\end{enumerate}
+
+\subsubsubsection{Antrasis etapas}
+
+Antrajame etape, VGG16 
+
+\subsubsubsection{Trečiasis etapas}
 
 \section{Gestų kalbos statinių ženklų atpažinimas}
+Praeitame skyriuje aptarėme, kaip apmokyti sistemą, jog ji atpažintų gestus kuo tiksliau. Dabar aptarkime, kaip tiksliai atpažįsta paduotus statinius gestų kalbos ženklus apmokytoji sistema.
+
 \subsection{Atpažinimas naudojant gestų nuotraukas}
 Norint, jog sistema apsimokytų kuo tiksliau, reikia jai duoti kuo daugiau duomenų. Sakykime, kad:
 \begin{itemize}
@@ -418,13 +547,13 @@ suformuluojamos svarbiausios darbo išvados, rekomendacijos bei pasiūlymai.
 % diskelyje ar kompaktiniame diske. Priedai taip pat vadinami ir numeruojami.
 % Tekstas su priedais siejamas nuorodomis (pvz.: \ref{img:mlp}).
 
-%\section{Niauroninio tinklo struktūra}
-%\begin{figure}[H]
-%    \centering
-%    \includegraphics[scale=0.5]{img/MLP}
-%    \caption{Paveikslėlio pavyzdys}   % Antraštė įterpiama po paveikslėlio
-%    \label{img:mlp}
-%\end{figure}
+\section{VGG16 architektūra}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/vgg-architecture}
+    \caption{VGG16 architektūros modelis}   % Antraštė įterpiama po paveikslėlio
+    \label{img:vgg}
+\end{figure}
 %
 %
 %\section{Eksperimentinio palyginimo rezultatai}

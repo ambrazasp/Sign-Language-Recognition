@@ -19,22 +19,6 @@
 
 \refsection{0}
   \sortlist[entry]{anyt/global}
-    \entry{RecurrentNeuralNetwork}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=c6d61140e00718cb70b246da1c2cca3a}{%
-           family={{Christopher\bibnamedelimb Olah}},
-           family_i={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{c6d61140e00718cb70b246da1c2cca3a}
-      \strng{fullhash}{c6d61140e00718cb70b246da1c2cca3a}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{http://colah.github.io/posts/2015-08-Understanding-LSTMs/}}
-      \field{title}{Understanding LSTM Networks}
-      \field{year}{2015}
-    \endentry
     \entry{Hay09}{book}{}
       \name{author}{1}{}{%
         {{hash=91e57481898b943d6a72a1deba06a6a9}{%
@@ -78,6 +62,64 @@
       \field{title}{ASL: Ranking and number of users}
       \field{year}{2004}
     \endentry
+    \entry{NIPS2012_4824}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           family_i={K\bibinitperiod},
+           given={Alex},
+           given_i={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           family_i={S\bibinitperiod},
+           given={Ilya},
+           given_i={I\bibinitperiod}}}%
+        {{hash=5aeb1de9b6c6f00a078230c628e6f41c}{%
+           family={Hinton},
+           family_i={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E},
+           given_i={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=b4ac0d7da3c70152eb8651dd27648d63}{%
+           family={Pereira},
+           family_i={P\bibinitperiod},
+           given={F.},
+           given_i={F\bibinitperiod}}}%
+        {{hash=b70004bbac2b5517c4c32fc5cfe070be}{%
+           family={Burges},
+           family_i={B\bibinitperiod},
+           given={C.\bibnamedelimi J.\bibnamedelimi C.},
+           given_i={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=27b0ff756cf36911b4cd7d704bfca7a4}{%
+           family={Bottou},
+           family_i={B\bibinitperiod},
+           given={L.},
+           given_i={L\bibinitperiod}}}%
+        {{hash=2cffb24bf1e4e0056d694659663c471c}{%
+           family={Weinberger},
+           family_i={W\bibinitperiod},
+           given={K.\bibnamedelimi Q.},
+           given_i={K\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{fullhash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems 25}
+      \field{title}{ImageNet Classification with Deep Convolutional Neural Networks}
+      \field{year}{2012}
+      \field{pages}{1097\bibrangedash 1105}
+      \range{pages}{9}
+      \verb{url}
+      \verb http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
+      \endverb
+    \endentry
     \entry{WhoInt}{misc}{}
       \name{author}{1}{}{%
         {{hash=07025dc7a22c08e61d41e77563b30557}{%
@@ -98,7 +140,6 @@
       \field{year}{2017}
     \endentry
   \endsortlist
-  \missing{ArtificialNeuralNetwork}
 \endrefsection
 \endinput
 

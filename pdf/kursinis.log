@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.5.15)  7 JUN 2017 14:12
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.5.15)  8 JUN 2017 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1328,15 +1328,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'kursinis.bbl' found.
-(./kursinis.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                ArtificialNeuralNetwork
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+(./kursinis.bbl)
 Package biblatex Info: Reference section=0 on input line 33.
 Package biblatex Info: Reference segment=0 on input line 33.
  ABD: EveryShipout initializing macros
@@ -1376,25 +1368,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--91
 
 [4
 
-]
-
-LaTeX Warning: Reference `tikz:ann' on page 5 undefined on input line 101.
-
-[5]
+] [5]
+File: img/cnn.png Graphic file (type QTm)
+ <use  "img/cnn.png" > [6]
 File: img/rnn.png Graphic file (type QTm)
- <use  "img/rnn.png" > [6]
+ <use  "img/rnn.png" > [7]
 File: img/asl_alphabet.png Graphic file (type QTm)
- <use  "img/asl_alphabet.png" >
+
+<use  "img/asl_alphabet.png" >
 File: img/lsl_alphabet.jpg Graphic file (type QTm)
+ <use  "img/lsl_alphabet.jpg" > [8
 
-<use  "img/lsl_alphabet.jpg" > [7
-
-] [8]
+] [9]
 File: img/A.jpg Graphic file (type QTm)
- <use  "img/A.jpg" >
-File: img/A-sobelX.png Graphic file (type QTm)
 
-<use  "img/A-sobelX.png" >
+<use  "img/A.jpg" >
+File: img/A-sobelX.png Graphic file (type QTm)
+ <use  "img/A-sobelX.png" >
 File: img/A-sobelY.png Graphic file (type QTm)
  <use  "img/A-sobelY.png" >
 File: img/A-sobel.png Graphic file (type QTm)
@@ -1404,31 +1394,33 @@ File: img/A-black.jpg Graphic file (type QTm)
  <use  "img/A-black.jpg" >
 File: img/A-white.jpg Graphic file (type QTm)
  <use  "img/A-white.jpg" >
-[9
+[10
 
-] [10] [11] [12] [13
+] [11] [12] [13] [14] [15] [16
 
-] [14
+] [17
 
-] [15
+] [18
 
-] [16
+] [19
+
+]
+File: img/vgg-architecture.png Graphic file (type QTm)
+
+<use  "img/vgg-architecture.png" > [20
 
 ] (./kursinis.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'kursinis.run.xml'.
 \openout1 = `kursinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34072 strings out of 493638
- 663637 string characters out of 6146796
- 991379 words of memory out of 5000000
- 36966 multiletter control sequences out of 15000+600000
- 15710 words of font info for 83 fonts, out of 8000000 for 9000
+ 34088 strings out of 493638
+ 663986 string characters out of 6146796
+ 999489 words of memory out of 5000000
+ 36978 multiletter control sequences out of 15000+600000
+ 15718 words of font info for 84 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 68i,12n,96p,10497b,2236s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,12n,96p,10497b,2263s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on kursinis.pdf (17 pages).
+Output written on kursinis.pdf (21 pages).

@@ -2055,6 +2055,7 @@
     <bcf:citekey order="1">WhoInt</bcf:citekey>
     <bcf:citekey order="2">GUL</bcf:citekey>
     <bcf:citekey order="3">Hay09</bcf:citekey>
+    <bcf:citekey order="4">NIPS2012_4824</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="anyt/global" type="entry" sortscheme="anyt" sortnamekeyscheme="global">
   <bcf:sorting>
