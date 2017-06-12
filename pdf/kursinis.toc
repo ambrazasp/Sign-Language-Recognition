@@ -66,17 +66,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.}Duomenys}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.}Sistemos apmokymas}{17}
+\contentsline {subsection}{\numberline {4.2.}Duomenų suskirstymas}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1.}Duomenų suskirstymas}{17}
+\contentsline {subsection}{\numberline {4.3.}Sistemos apmokymas}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.}Atpažinimas naudojant gestų nuotraukas}{17}
+\contentsline {section}{Išvados}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.}Atpažinimas naudojant internetinę kamerą}{18}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Išvados}{19}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{20}
+\contentsline {section}{Literatūra}{19}
 \defcounter {refsection}{0}\relax 
 \def \@dotsep {1000}
 \defcounter {refsection}{0}\relax 

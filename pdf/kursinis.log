@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.5.15)  10 JUN 2017 22:22
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.5.15)  12 JUN 2017 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1403,13 +1403,13 @@ File: img/A2.jpg Graphic file (type QTm)
  <use  "img/A2.jpg" >
 [17
 
-] [18] [19
+] [18
 
-] [20
+] [19
 
 ]
 File: img/vgg-architecture.png Graphic file (type QTm)
- <use  "img/vgg-architecture.png" > [21
+ <use  "img/vgg-architecture.png" > [20
 
 ] (./kursinis.aux)
 Package logreq Info: Writing requests to 'kursinis.run.xml'.
@@ -1425,4 +1425,4 @@ Here is how much of TeX's memory you used:
  1328 hyphenation exceptions out of 8191
  68i,12n,96p,10497b,2263s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on kursinis.pdf (22 pages).
+Output written on kursinis.pdf (21 pages).

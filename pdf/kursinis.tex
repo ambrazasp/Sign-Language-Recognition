@@ -299,13 +299,13 @@ G = \sqrt{G_x^2 + G_y^2}
 	\end{minipage}
 \end{figure}
 
-Prieš kadrui taikant Sobel funkcijas, reikia jį paruošti. Kadangi Sobel funkcijos ima matricas sudarytas iš \textit{3 x 3} skaičių, todėl reikia sušvelninti šalia esančius skaičius, tam jog jos rastų tikruosius kontūrus. Tą padaryti lengviausia uždedant kadrui, pavyzdžiui, 5\% miglą (\textit{angl. blur}). Uždėti miglą reikia tam, jog sumažintume triukšmą (\textit{angl. noise}) kontūrams. 
+Prieš kadrui taikant Sobel funkcijas, reikia jį paruošti. Kadangi Sobel funkcijos ima matricas sudarytas iš \textit{3 $\times$ 3} skaičių, todėl reikia sušvelninti šalia esančius skaičius, tam jog jos rastų tikruosius kontūrus. Tą padaryti lengviausia uždedant kadrui, pavyzdžiui, 5\% miglą (\textit{angl. blur}). Uždėti miglą reikia tam, jog sumažintume triukšmą (\textit{angl. noise}) kontūrams. 
 
 Toliau, atiduodant kadrą Sobel funkcijoms, kadras yra konvertuojamas į skaičių masyvą, kur kiekvienas taškas turi savo skaičių – spalvos kodą. Tuomet norint rasti visus kontūrus esančius kadre, taikome šiuos veiksmus:
 
 \begin{enumerate}
-	\item Einame per visus taškus esančius kadre ir taikome \ref{eq:sobelgx} formulę, kur A - kiekvienas \textit{3 x 3} kadro taško spalvos mastyvas. Gauname \ref{img:a-sobelX} paveiksle pavaizduotą vaizdą;
-	\item Einame per visus taškus esančius kadre ir taikome \ref{eq:sobelgy} formulę, kur A - kiekvienas \textit{3 x 3} kadro taško spalvos mastyvas. Gauname \ref{img:a-sobelY} paveiksle pavaizduotą vaizdą;
+	\item Einame per visus taškus esančius kadre ir taikome \ref{eq:sobelgx} formulę, kur A - kiekvienas \textit{3 $\times$ 3} kadro taško spalvos mastyvas. Gauname \ref{img:a-sobelX} paveiksle pavaizduotą vaizdą;
+	\item Einame per visus taškus esančius kadre ir taikome \ref{eq:sobelgy} formulę, kur A - kiekvienas \textit{3 $\times$ 3} kadro taško spalvos mastyvas. Gauname \ref{img:a-sobelY} paveiksle pavaizduotą vaizdą;
 	\item Apskaičiuojame dabartinio taško tikrąją reiškę taikydami \ref{eq:sobelg} formulę. Gauname \ref{img:a-sobel} paveiksle pavaizduotą vaizdą.
 \end{enumerate}
 
@@ -407,7 +407,7 @@ Konvoliucinis sluoksnis turi tokius parametrus:
 
 Sluoksnis, kuris pagal filtrą nusprendžia, kokia išeities matricą bus gaunama. Tarkime, jog bus imamas filtras, kuris yra \textit{3 $\times$ 3} matrica. Kadrą, kaip jau buvo minėta teorijos skyriuje, galima išskirstyti į tris skirtingus sluoksnius - raudonos, žalio ir mėlynos spalvos. Pavertus šiuos sluoksnius skaičių matricomis, kur 0 – spalva nenaudojama, o 255 – spalva naudojama pilnai ryškiai, gaunamos matricas, kurios nusako, kaip kiekviename taške ryškiai yra naudojama tam tikra spalva.
 
-Einant taškas po taško per kadro kiekvienos spalvos matricą, imamos \textit{3 x 3} matricos, kurios yra sudauginamos su filtro matricomis. Taip gaunama matrica, kuria remantis bus galima išskirti savybes.
+Einant taškas po taško per kadro kiekvienos spalvos matricą, imamos \textit{3 $\times$ 3} matricos, kurios yra sudauginamos su filtro matricomis. Taip gaunama matrica, kuria remantis bus galima išskirti savybes.
 
 \textit{Pavyzdys:}
 
@@ -448,7 +448,7 @@ Einant taškas po taško per kadro kiekvienos spalvos matricą, imamos \textit{3
 0*1+0*0+0*1+1*0+1*1+0*0+1*1+0*0+1*1=\colorbox{pink}{3}
 \end{equation}
 
-\ref{eq:convl} formulėje yra pateikiama \textit{7 x 7} matrica sudauginama su \textit{3 x 3} filtru. Panagrinėsime pirmos eilutės pirmąjį (\textit{žr. \ref{eq:convl1} formulę}) ir antrąjį (\textit{žr. \ref{eq:convl2} formulę}) narius. Pirmasis narys yra kampinis skaičius 1. Todėl jis dauginaas su filtro viduriniuoju nariu. Kadangi dabar filtras „išlenda“ iš matricos rėmų, tai įsivaizduojama, kad yra kadro matricai rėmelis, kuris yra sudarytas iš 0. \ref{eq:convl1} ir \ref{eq:convl2} formulėse pirmasis sandaugos narys - \textit{7 x 7} kadro matricos narys, antrasis - \textit{3 x 3} filtro matricos narys.
+\ref{eq:convl} formulėje yra pateikiama \textit{7 $\times$ 7} matrica sudauginama su \textit{3 $\times$ 3} filtru. Panagrinėsime pirmos eilutės pirmąjį (\textit{žr. \ref{eq:convl1} formulę}) ir antrąjį (\textit{žr. \ref{eq:convl2} formulę}) narius. Pirmasis narys yra kampinis skaičius 1. Todėl jis dauginaas su filtro viduriniuoju nariu. Kadangi dabar filtras „išlenda“ iš matricos rėmų, tai įsivaizduojama, kad yra kadro matricai rėmelis, kuris yra sudarytas iš 0. \ref{eq:convl1} ir \ref{eq:convl2} formulėse pirmasis sandaugos narys - \textit{7 $\times$ 7} kadro matricos narys, antrasis - \textit{3 $\times$ 3} filtro matricos narys.
 
 \begin{equation}\label{eq:nuliai}
 M=\frac{F-1}{2}
@@ -476,7 +476,7 @@ Telkimo sluoksnis turi tokius parametrus:
 \end{itemize}
 
 
-Kaip buvo minėta anksčiau, telkimo sluoksnis yra skirtas sumažinti matricą arba kitais žodžiais tariant - kadrą. Kaip pavyzdį paimkime, jog telkimo sluoksnio filtro dydis bus \textit{3 x 3}. Bus taikomas maksimalaus telkimo principas, kuris nusako, jog paėmus matricos poaibį yra išrenkama didžiausia reikšmė.
+Kaip buvo minėta anksčiau, telkimo sluoksnis yra skirtas sumažinti matricą arba kitais žodžiais tariant - kadrą. Telkimo sluoksnis dažniausiai taiko arba vidutinės arba didžiausios reikšmės atrinkimo algoritmą. Kaip pavyzdį paimkime, jog telkimo sluoksnio filtro dydis bus \textit{3 $\times$ 3}. Bus taikomas maksimalaus telkimo principas, kuris nusako, jog paėmus matricos poaibį yra išrenkama didžiausia reikšmė.
 
 \textit{Pavyzdys:}
 \begin{equation}\label{eq:poll}
@@ -513,11 +513,11 @@ Kaip buvo minėta anksčiau, telkimo sluoksnis yra skirtas sumažinti matricą a
 	\end{bmatrix}
 	) = \colorbox{pink}{4}
 \end{equation}
-\ref{eq:poll} formulėje parodyta, kaip pritaikius \textit{3 x 3} telkimo filtrą gaunama beveik 90\% mažesnė matrica. Mažinimas vyksta taip: imama filtro dydžio matrica, pradėdedant nuo kairiojo viršutinio kampo. Tuomet iš tos matricos išrenkama didžiausia reikšmė (\textit{žr. \ref{eq:poll1} formulę}) ir į naująją matricą ji įrašoma. Tuomet, kadangi jau iš pirmosios \textit{3 x 3} matricos yra išrinkta didžiausia reikšmė, imama kitą į dešinę esanti matrica, kuri nepersidengia su pirmąja ir iš jos taip pat išrenkama didžiausia reikšmė (\textit{žr. \ref{eq:poll2} formulę}). Taip filtras yra pritaikomas ir likusioms matricos dalims. Jei filtras „užeina“ už kadro matricos ribų, interpretuojama, jog tose vietose yra 0.
+\ref{eq:poll} formulėje parodyta, kaip pritaikius \textit{3 $\times$ 3} telkimo filtrą gaunama beveik 90\% mažesnė matrica. Mažinimas vyksta taip: imama filtro dydžio matrica, pradėdedant nuo kairiojo viršutinio kampo. Tuomet iš tos matricos išrenkama didžiausia reikšmė (\textit{žr. \ref{eq:poll1} formulę}) ir į naująją matricą ji įrašoma. Tuomet, kadangi jau iš pirmosios \textit{3 $\times$ 3} matricos yra išrinkta didžiausia reikšmė (jei būtų taikomas vidutinės reikšmės atrinkimo algoritmas, būtų imama šios matricos vidutinė reikšmė), imama kitą į dešinę esanti matrica, kuri nepersidengia su pirmąja ir iš jos taip pat išrenkama didžiausia reikšmė (\textit{žr. \ref{eq:poll2} formulę}). Taip filtras yra pritaikomas ir likusioms matricos dalims. Jei filtras „užeina“ už kadro matricos ribų, interpretuojama, jog tose vietose yra 0.
 
 \subsubsection{Apmokymas naudojantis konvoliucinio neuroninio tinklo modeliu}
 
-Kiekvieną sistemą galima apmokyti naudojantis kovoliuciniu neuroniniu tinklo modeliu arba nuodugniai (kuomet apmokomas modelis neturi jokių duomenų) arba dalinai (kuomet pasinaudojama jau veikiančiu modeliu ir nutrinami paskutinį ar paskutinius sluoksnius). Apmokymas nuo pat pradžių dažniausiai reikalauja labai daug laiko resursų, nes užtrunka labai daug laiko. Šis modelis retai naudojamas praktikoje. Dažniausiai naudojamas dalinis apmokymas, pasinaudojus jau sukurtu modeliu galima jį pakartotinai apmokyti norimam rezultatui gauti.
+Kiekvieną sistemą galima apmokyti naudojantis kovoliuciniu neuroniniu tinklo modeliu arba nuodugniai (kuomet apmokomas modelis neturi jokių duomenų) arba dalinai (kuomet pasinaudojama jau veikiančiu modeliu ir nutrinami paskutinį ar paskutinius sluoksnius). Apmokymas nuo pat pradžių dažniausiai reikalauja labai daug laiko resursų, nes užtrunka labai daug laiko. Šis modelis retai naudojamas praktikoje. Dažniausiai naudojamas dalinis apmokymas, pasinaudojus jau sukurtu modeliu galima jį pakartotinai apmokyti norimam rezultatui gauti. 
 
 \textbf{Keras} - giliojo mokymosi biblioteka, naudojama su Theano arba TensorFlow.
 
@@ -528,7 +528,7 @@ Naudojantis Keru, sistema buvo apmokyta naudojantis konvoliucinio neuroninio tin
 
 Pasinaudota dvejomis duomenų aibėmis - pirmoji skirta mokymuisi (\textit{data/train}) ir antroji - pasitvirtinimui - validacijai (\textit{data/validation}).
 
-Buvo naudojamasi VGG16 (\textit{Visual Geometry Group}) architektūra (\textit{žr. \ref{img:vgg} pav.}) - konvoliucinių ir telkimo sluoksnių pasikartojančios grandinės. Telkimui naudojama \textit{2 x 2} matrica, o konvuliacijai - \textit{3 x 3} matrica.
+Buvo naudojamasi VGG16 (\textit{Visual Geometry Group}) architektūra (\textit{žr. \ref{img:vgg} pav.}) - konvoliucinių ir telkimo sluoksnių pasikartojančios grandinės. Telkimui naudojama \textit{2 $\times$ 2} matrica, o konvuliacijai - \textit{3 $\times$ 3} matrica.
 
 \subsubsubsection{Pirmasis etapas}
 Pirmame etape buvo pritaikytas duomenų dauginimo (\textit{angl. data augmentation}) principas iš duotųjų mokymuisi ir validacijai. Kiekvienam kadrui buvo pritaikytos įvairios modifikacijos apmokant - kadro priartinimas, pakreipimas, horizontalus apvertimas.
@@ -575,23 +575,30 @@ Duomenys (programinis kodas ir kadrai) buvo parsisiųsti iš jau įgyvendintų p
 
 Kiekvienam iš 150-250 kadrų kiekvienai raidei buvo uždėta po du atsitiktinai sugeneruotus fonus. Gesto dydis, spalva, pokrypis keičiamas nebuvo. Todėl buvo sudaryta po ~400 gesto kadrų kiekvienai raidei su 21 skirtingu fonu.
 
+\subsection{Duomenų suskirstymas}
+
+Duomenys buvo suskirstyti į aplankus, kur aplanko pavadinimas rodo raidę, kurią atitinka gestas. Taip buvo sukurti 24 aplankai kiekvienai iš 24 ASL raidžių. Visi duomenys buvo suskirstyti į tris aplankus, kurie buvo skirti apmokymui, patikrinimui ir testavimui. Duomenų imta labai nedaug - apmokymui skirtų gestų kadrų buvo po 500 kiekvienai raidei, patikrinimui - 200 kiekvienai raidei ir dar 100 testavimui skirtų kadrų. Bendrai: 
+\begin{equation}
+	500*24+200*24+200=17000
+\end{equation}
+
 \subsection{Sistemos apmokymas}
-Buvo pasirinkta apmokyti sistemą konvoliucinio neuroninio tinklo modeliu. Buvo pasirinkta sistemą apmokyti naudojantis „Keras“ giliojo mokymosi biblioteka, kuri naudojosi „Theano“ biblioteka (\textit{plačiau - 3.3.3. skyriuje}).
+Buvo pasirinkta apmokyti sistemą konvoliucinio neuroninio tinklo modeliu. Buvo pasirinkta sistemą apmokyti naudojantis „Keras“ giliojo mokymosi biblioteka, kuri naudojosi „Te“ biblioteka (\textit{plačiau - 3.3.3. skyriuje}).
 
-\subsubsection{Duomenų suskirstymas}
-
-
-\subsection{Atpažinimas naudojant gestų nuotraukas}
-Norint, jog sistema apsimokytų kuo tiksliau, reikia jai duoti kuo daugiau duomenų. Sakykime, kad:
-\begin{itemize}
-	\item\textit{a\textsubscript{ik}} - \textit{i}-toji \textit{k}-tosios abėcėlės raidės nuotrauka 
-	\item\textit{a\textsubscript{1k}, a\textsubscript{2k}, ..., a\textsubscript{nk}} - nuotraukų rinkinys, sudarytas iš \textit{n} \textit{k}-tosios raidės nuotraukų
-\end{itemize}
-Tuomet, turėdami \textit{n * k} nuotraukų, kuriuose vaizduojami gestų abėcėlės gestai, turime, jog tiek eilučių duomenų turėsime gestams atpažinti. Kuo gestai yra įvairesni prie skirtingų apšvietimų, skirtingų rankų ir pan., tuo tiksliau sistema pati galės vėliau atpažinti gestus.
+%\subsubsection{Duomenų suskirstymas}
 
 
-\subsection{Atpažinimas naudojant internetinę kamerą}
-Norint atpažinti statinius gestus naudojant internetinę kamerą, vienas iš to būdų yra naudotis \textit{BackgroundSubtractorMOG2} klase. Ši klasė remiasi Gauso maišos priekinio plano/fono atskyrimo algoritmu
+%\subsection{Atpažinimas naudojant gestų nuotraukas}
+%Norint, jog sistema apsimokytų kuo tiksliau, reikia jai duoti kuo daugiau duomenų. Sakykime, kad:
+%\begin{itemize}
+%	\item\textit{a\textsubscript{ik}} - \textit{i}-toji \textit{k}-tosios abėcėlės raidės nuotrauka 
+%	\item\textit{a\textsubscript{1k}, a\textsubscript{2k}, ..., a\textsubscript{nk}} - nuotraukų rinkinys, sudarytas iš \textit{n} \textit{k}-tosios raidės nuotraukų
+%\end{itemize}
+%Tuomet, turėdami \textit{n * k} nuotraukų, kuriuose vaizduojami gestų abėcėlės gestai, turime, jog tiek eilučių duomenų turėsime gestams atpažinti. Kuo gestai yra įvairesni prie skirtingų apšvietimų, skirtingų rankų ir pan., tuo tiksliau sistema pati galės vėliau atpažinti gestus.
+
+
+%\subsection{Atpažinimas naudojant internetinę kamerą}
+%Norint atpažinti statinius gestus naudojant internetinę kamerą, vienas iš to būdų yra naudotis \textit{BackgroundSubtractorMOG2} klase. Ši klasė remiasi Gauso maišos priekinio plano/fono atskyrimo algoritmu
 
 
 
