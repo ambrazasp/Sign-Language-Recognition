@@ -1,0 +1,83 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {lithuanian}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Įvadas}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{Darbo tikslas}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{Naudojamos priemonės}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{Tyrimo eiga}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.}Teorija}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.}Apsimokančios sistemos}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.}Neuroniniai tinklai}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.1.}Dirbtiniai neuroniniai tinklai}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.2.}Konvoliuciniai neuroniniai tinklai}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.3.}Rekurentiniai neuroniniai tinklai}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.}Gestų kalba}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.}Gestų kalbos skirstymas}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.}Problematika}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.1.}Statinių ženklų problematika}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.2.}Dinaminių ženklų problematika}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.}Sistemos apmokymas}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.}Kadro transofrmacija}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.}Sistemos apmokymas, naudojantis įprastinėmis sistemomis}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.1.}Kadro apdorojimas naudojant Sobel branduolį}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.2.}Apsimokančių sistemų apmokymas iš Sobel branduoliu apdoroto kadro}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {3.2.2.1.}Logistinės regresijos algoritmas}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {3.2.2.2.}Linijinis palaikančiųjų vektorių algoritmas}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {3.2.2.3.}K artimiausių kaimynų algoritmas}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.}Sistemos apmokymas, naudojantis konvoliucinio neuroninio tinklo modeliu}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.3.1.}Konvoliucinis sluoksnis}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.3.2.}Telkimo sluoksnis}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.3.3.}Apmokymas naudojantis konvoliucinio neuroninio tinklo modeliu}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {3.3.3.1.}Pirmasis etapas}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {3.3.3.2.}Antrasis etapas}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {3.3.3.3.}Trečiasis etapas}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.}Praktinis gestų kalbos apmokyto modelio pritaikymas}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.}Duomenys}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.}Sistemos apmokymas}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.1.}Duomenų suskirstymas}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.}Atpažinimas naudojant gestų nuotraukas}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.}Atpažinimas naudojant internetinę kamerą}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Išvados}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Literatūra}{20}
+\defcounter {refsection}{0}\relax 
+\def \@dotsep {1000}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Priedas Nr.1}{}

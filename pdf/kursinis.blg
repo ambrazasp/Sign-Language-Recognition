@@ -1,0 +1,16 @@
+[0] Config.pm:340> INFO - This is Biber 2.4
+[0] Config.pm:343> INFO - Logfile is 'kursinis.blg'
+[36] biber:287> INFO - === Kt Bir  8, 2017, 11:28:34
+[127] Biber.pm:348> INFO - Reading 'kursinis.bcf'
+[264] Biber.pm:742> INFO - Found 4 citekeys in bib section 0
+[270] Biber.pm:3151> INFO - Processing section 0
+[298] Biber.pm:3308> INFO - Looking for bibtex format file 'bibliografija.bib' for section 0
+[314] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[330] bibtex.pm:974> INFO - Found BibTeX data source 'bibliografija.bib'
+[361] Utils.pm:147> WARN - BibTeX subsystem: /tmp/iTJdRY23PX/bibliografija.bib_12020.utf8, line 4, warning: 148 characters of junk seen at toplevel
+[398] UCollate.pm:65> INFO - Overriding locale 'lt-LT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[398] UCollate.pm:65> INFO - Overriding locale 'lt-LT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[398] Biber.pm:3028> INFO - Sorting list 'anyt/global' of type 'entry' with scheme 'anyt' and locale 'lt-LT'
+[403] bbl.pm:519> INFO - Writing 'kursinis.bbl' with encoding 'UTF-8'
+[417] bbl.pm:615> INFO - Output to kursinis.bbl
+[417] Biber.pm:109> INFO - WARNINGS: 1
