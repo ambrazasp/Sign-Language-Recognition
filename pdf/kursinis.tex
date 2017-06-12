@@ -36,6 +36,7 @@
 \tableofcontents
 
 \sectionnonum{Įvadas}
+
 Daugiau nei 360 milijonų žmonių pasaulyje kenčia dėl klausos ir kalbos įvairių problemų, o daugiau nei 32 milijonai jų yra vaikai ir šis skaičius vis auga \cite{WhoInt}. Gestų kalba yra pagrindinis šių žmonių bendravimo įrankis. Tačiau reiktų pastebėti ir tai, jog dalis jų moka dalinai skaityti iš lūpų. Norint žmogui be šių ydų bendrauti su gestakalbiu (\textit{gestų kalba kalbantis žmogus}), o kartais net dviems gestakalbiams tarpusavyje, reikia vertėjo, kuris išverstų gestų kalbą į įprastinę ir atvirkščiai.
 
 Kiekviena pasaulyje esanti kalba turi ir savo gestų kalbą. Tai reiškia, skiriasi tiek gestų kalbos gramatika, tiek netgi patys gestai. Pasaulyje randama net dialektų pagal regionus, ne tik pagal šalis. Amerikiečių anglų gestų kalba (\textit{toliau - ASL}) šnekančių žmonių pasaulyje priskaičiuojam nuo 500 tūkstančių iki netgi 2 milijonų vien tik Jungtinėse Amerikos Valstijose. Remiantis Census Bereau surinktais duomenimis, kuris domisi kalbų mažumomis, ASL yra pirmoji mažumos kalba, po „didžiojo ketverto“, kurį sudaro ispanų, italų, vokiečių ir prancūzų kalbos \cite{GUL}. Tad netgi bendraujant dviem žmonėms, mokantiems gestų kalbą neretai iškyla vertimo problema, todėl tenka ieškoti gestų vertimų. Paiešką šiuo metu galima atlikti atsižvelgiant į delno padėtį, vienos ar abiejų rankų judesį, jų padėtį ir gestą atliekančių rankų skaičių. Tuomet pagal gesto išvaizdos nuotraukas ar kartais net vaizdo įrašus, gestakalbiai gali išsiversti gestus. Tam yra skirtos tiek internetinės svetainės - žodynai, tiek įvairūs rašytiniai žodynai.
@@ -64,7 +65,6 @@ Kiekviena pasaulyje esanti kalba turi ir savo gestų kalbą. Tai reiškia, skiri
 	\item Praktinis pritaikymas.
 \end{enumerate}
 
-
 %Įvade apibūdinamas darbo tikslas, temos aktualumas ir siekiami rezultatai.
 %Darbo įvadas neturi būti dėstymo santrauka. Įvado apimtis 1–2 puslapiai.
 
@@ -72,12 +72,14 @@ Kiekviena pasaulyje esanti kalba turi ir savo gestų kalbą. Tai reiškia, skiri
 Šiame skyriuje bus aprašoma teorija apie apsimokančias sistemas ir neuroninius tinklus.
 
 \subsection{Apsimokančios sistemos}
+
 \textbf{Apsimokančios sistemos} (\textit{angl. machine learning}) - tai mokslas apie tai, kaip kompiuterius užprogramuoti taip, jog jie patys darytų sprendimus be žmogaus įsikišimo neužprogramuojant kiekvienos galimos situacijos. Kitais žodžiais tariant, leisti kompiuteriui pačiam nuspręsti kaip elgtis esant tam tikroms aplinkybėms. Savaime apsimokančios sistemos yra didelis žingsnis į priekį norint sukurti dirbtinį intelektą.
 
 Savaime apsimokančių sistemų ir jų algoritmų sukūrimo dėka gatvėmis pradėjo važinėti patys save vairuojantys automobiliai (\textit{angl. self-driving cars}) arba dar kitaip vadinamos autonominės transporto priemonės. Įvairūs paieškos varikliai tokie kaip „Google“ ar „Yahoo“ taikydami šiuos alogirtmus naudotojams rodo kiekvienam asmeniškai sugeneruotą turinį. Taip pat reikėtų paminėti ir kalbos atpažinimo sistemas tokias kaip „Siri“ ar „Google Assistant“, kurios iš joms duotų komandų atlieka tam tikrus veiksmus.
 
 \subsection{Neuroniniai tinklai}
 \textbf{Neuronas} (\textit{arba - nervinė ląstelė}) - pagrindinės nervų sistemos ląstelės, sukuriančios ir/arba perduodančios elektrocheminius impulsus.
+
 
 
 Žmogaus smegenys yra sudėtingas, nelinijinis ir paralelinis kompiuteris\cite{Hay09}, kurias sudaro neuronai. Vienas neuronas vienu metu jungiasi su daugybe kitų neuronų per dendritus, ant kurių yra daug sinapsių, per kurias ateina informacija iš kitų neuronų. Dendritus paprasčiau galima pavadinti kaip informacijos priimėjais. Todėl vienas neuronas gali sudaryti iki 100000 sinapsių. Kiekviena sinapsė gali būti jaudinanti arba slopinanti. Visas šis mechanizmas dar nadinamas \textbf{neuroniniu tinklu} (\textit{angl. Neural network}).
@@ -226,7 +228,6 @@ Kiekvienas kadras yra sudarytas iš \textit{h * w * c} taškų (\textit{angl. pi
 
 Šiame poskyryje bus nagrinėjamos OpenCV atviro kodo (\textit{angl. open-source}) vaizdų atpažinimo aplikacijų programavimo sąsajoje esančios galimybės ir algoritmai.
 
-
 \subsubsection{Kadro apdorojimas naudojant Sobel branduolį}
 \textbf{Sobel branduolys} (\textit{angl. Sobel operator}) - vaizdų apdorojimo algoritmas, skirtas skirtas paversti kadrą į kontūrų žemėlapį.
 
@@ -340,6 +341,7 @@ Aptarsime visas technikas pasinaudodami ASL abėcėlės aibe, kurioje yra 24 sta
 
 Remiantis \ref{eq:lr1} formule, apsibrėžiama, jog tikimybės kiekvienai raidei bus ne mažesnės nei 0 ir ne didesnės nei 1, o \textit{i} pasako kelinta raidė tyrinėjama, kur, tarkime, A = 1, B = 2, ir t.t.
 
+
 \begin{equation}\label{eq:lr2}
 	h_\theta^i(x) = P(y=i | x; \theta)
 \end{equation}
@@ -440,12 +442,12 @@ Einant taškas po taško per kadro kiekvienos spalvos matricą, imamos \textit{3
 \end{equation}
 
 \begin{equation}\label{eq:convl1}
-0*1+0*0+0*1+0*0+1*1+1*0+0*1+1*0+0*1=\colorbox{green}{1}
+	0*1+0*0+0*1+0*0+1*1+1*0+0*1+1*0+0*1=\colorbox{green}{1}
 \end{equation}
 
 
 \begin{equation}\label{eq:convl2}
-0*1+0*0+0*1+1*0+1*1+0*0+1*1+0*0+1*1=\colorbox{pink}{3}
+	0*1+0*0+0*1+1*0+1*1+0*0+1*1+0*0+1*1=\colorbox{pink}{3}
 \end{equation}
 
 \ref{eq:convl} formulėje yra pateikiama \textit{7 $\times$ 7} matrica sudauginama su \textit{3 $\times$ 3} filtru. Panagrinėsime pirmos eilutės pirmąjį (\textit{žr. \ref{eq:convl1} formulę}) ir antrąjį (\textit{žr. \ref{eq:convl2} formulę}) narius. Pirmasis narys yra kampinis skaičius 1. Todėl jis dauginaas su filtro viduriniuoju nariu. Kadangi dabar filtras „išlenda“ iš matricos rėmų, tai įsivaizduojama, kad yra kadro matricai rėmelis, kuris yra sudarytas iš 0. \ref{eq:convl1} ir \ref{eq:convl2} formulėse pirmasis sandaugos narys - \textit{7 $\times$ 7} kadro matricos narys, antrasis - \textit{3 $\times$ 3} filtro matricos narys.

@@ -4,5 +4,9 @@ https://github.com/mon95/Sign-Language-and-Static-gesture-recognition-using-skle
 https://github.com/ssaamm/sign-language-tutor
 http://people.csail.mit.edu/yingyin/resources/doc/projects/6867term-project.pdf
 http://ieeexplore.ieee.org/document/4563181/?part=1
+<<<<<<< HEAD
 https://www.handspeak.com/word/asl-eng/index.php?fmFig=1-claw&fmMov=unidir&fmLoc=0-num&fmBoth=1
 https://github.com/tensorflow/models/tree/master/inception
+=======
+https://www.handspeak.com/word/asl-eng/index.php?fmFig=1-claw&fmMov=unidir&fmLoc=0-num&fmBoth=1
+>>>>>>> 6a2c9dcc264ff805026ed0f8a3157c035cf44a2f

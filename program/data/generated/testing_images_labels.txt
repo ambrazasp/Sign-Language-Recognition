@@ -1,0 +1,2 @@
+../data/images/test/006.jpg	test
+../data/images/test/007.jpg	test
