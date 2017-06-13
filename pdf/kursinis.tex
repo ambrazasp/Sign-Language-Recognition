@@ -54,11 +54,12 @@ Kiekviena pasaulyje esanti kalba turi ir savo gestų kalbą. Tai reiškia, skiri
 	\item Matematinių skaičiavimų biblioteka NumPy;
 	\item Įrankių moksliniams tyrimams biblioteka SciPy;
 	\item Savaime apsimokančių sistemų biblioteka scikit-learn;
-	\item Neuroninių tinklų aplikacijų programavimo sąsaja Keras.
+	\item Neuroninių tinklų aplikacijų programavimo sąsaja Keras;
+	\item Atviro kodo skaičiavimo operacijų biblioteka TensorFlow, kuri labiausiai specializuojasi ties apsimokančiomis sistemomis.
 \end{enumerate}
 
 \subsectionnonum{Tyrimo eiga}
-Šiame darbe bus nagrinėjamos amerikiečių anglų ir lietuvių gestų kalbos.
+Šiame darbe bus nagrinėjama amerikiečių anglų ir lietuvių gestų kalbos.
 \begin{enumerate}
 	\item Susipažinimas su gestų kalba ir jos problematika;
 	\item Susipažinimas su kelių tipų apmokymo sistemomis;
@@ -185,17 +186,15 @@ Gestų kalba susideda iš dviejų dalių - statinių ir dinaminių ženklų. Ges
 		\includegraphics[width=.8\linewidth]{img/asl_alphabet}
 		\caption[a]{Amerikiečių gestų kalbos abėcėlė\footnotemark}
 		\label{img:asl_alphabet}
-		%http://lifeprint.com/asl101/topics/wallpaper1.htm
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[width=.5\linewidth]{img/lsl_alphabet}
 		\caption[b]{Lietuvių gestų kalbos abėcėlė\footnotemark}
 		\label{img:lsl_alphabet}
-		%https://www.kspvm.lm.lt/images/naujienos/2016-2017/kurciuju-filmuko-laimejimas/img/lt-gestu-abecele.jpg
 	\end{minipage}
 \end{figure}
-\footnotetext{\url{http://lifeprint.com/asl101/topics/wallpaper1.htm}}
+\footnotetext[4]{\url{http://lifeprint.com/asl101/topics/wallpaper1.htm}}
 \footnotetext{\url{http://gestai.ndt.lt/pirstu-abecele}}
 \subsection{Problematika}
 Norint atpažinti gestus, paversti juos į raides, žodžius ar sakinius susiduriama su problemomis, kurios susijusios tiek su statinių, tiek su dinaminių gestų atpažinimu.
@@ -203,7 +202,7 @@ Norint atpažinti gestus, paversti juos į raides, žodžius ar sakinius susidur
 \subsubsection{Statinių ženklų problematika}
 Pagrindinės problemos iškylančios atpažįstant statinius gestų kalbos ženklus yra:
 \begin{enumerate}
-	\item Kiekvienos kalbos abėcėlę sudaro skirtingas raidžių (statinių ženklų) skaičius. \textit{Pavyzdžiui}, lietuvių kalbos abėcėlę sudaro 32 ženklai, o amerikietišką - 26; 
+	\item Kiekvienos kalbos abėcėlę sudaro skirtingas raidžių ir/ar statinių ženklų skaičius. \textit{Pavyzdžiui}, lietuvių kalbos abėcėlę sudaro 32 ženklai, o amerikietišką - 26; 
 	\item Gestų panašumai. \textit{Pavyzdžiui}, raidės A, E, N, S, T yra atvaizduojamos sugniaužtus kumštį, o net trijose iš jų (A, E ir S) skiriasi tik nykščio padėtis;
 	\item Kampas, kuris susidaro atpažįstant gestą. \textit{Pavyzdžiui}, kai A raidė rodoma ne iš priekio, o iš šono;
 	\item Apšvietimas. \textit{Pavyzdžiui}, gestų atpažinimas esant prieblandai ir dienos šviesai.
@@ -521,110 +520,153 @@ Kaip buvo minėta anksčiau, telkimo sluoksnis yra skirtas sumažinti matricą a
 
 Kiekvieną sistemą galima apmokyti naudojantis kovoliuciniu neuroniniu tinklo modeliu arba nuodugniai (kuomet apmokomas modelis neturi jokių duomenų) arba dalinai (kuomet pasinaudojama jau veikiančiu modeliu ir nutrinami paskutinį ar paskutinius sluoksnius). Apmokymas nuo pat pradžių dažniausiai reikalauja labai daug laiko resursų, nes užtrunka labai daug laiko. Šis modelis retai naudojamas praktikoje. Dažniausiai naudojamas dalinis apmokymas, pasinaudojus jau sukurtu modeliu galima jį pakartotinai apmokyti norimam rezultatui gauti. 
 
-\textbf{Keras} - giliojo mokymosi biblioteka, naudojama su Theano arba TensorFlow.
+Bene vienas lengviausiai naujokui suprantamų modelių yra VGG16 architektūros modelis. Tai 16 sluoksnių modelis, kurio architektūra pateikta 1 priede. Tai penkių žingsnių modelis, kuris taiko konvoliucijos ir telkimo sluoksnius kiekviename žingsnyje. \textit{Pavyzdžiui}, pirmame žingsnyje yra iš kadro yra sugeneruojami kadrai, kuriems pritaikomi 64 skirtingi filtrai (\textit{žr. \ref{img:filtersvgg} pav.}). Taikoma du kartus konvoliucija ir tuomet vieną kartą telkimas. Po visų penkių žingsnių, gaunamas pilnai apjungtas sluoksnis, kuris jau geba atpažinti objektus. 
 
-\textbf{Theano} - Python biblioteka, skirta darbui su matematinėmis išraiškomis, jų optimizavimui, apibrėžimui, darbui su n-mačiais masyvais.
-
-
-Naudojantis Keru, sistema buvo apmokyta naudojantis konvoliucinio neuroninio tinklo modeliu. Tai buvo atlikta trimis etapais.
-
-Pasinaudota dvejomis duomenų aibėmis - pirmoji skirta mokymuisi (\textit{data/train}) ir antroji - pasitvirtinimui - validacijai (\textit{data/validation}).
-
-Buvo naudojamasi VGG16 (\textit{Visual Geometry Group}) architektūra (\textit{žr. \ref{img:vgg} pav.}) - konvoliucinių ir telkimo sluoksnių pasikartojančios grandinės. Telkimui naudojama \textit{2 $\times$ 2} matrica, o konvuliacijai - \textit{3 $\times$ 3} matrica.
-
-\subsubsubsection{Pirmasis etapas}
-Pirmame etape buvo pritaikytas duomenų dauginimo (\textit{angl. data augmentation}) principas iš duotųjų mokymuisi ir validacijai. Kiekvienam kadrui buvo pritaikytos įvairios modifikacijos apmokant - kadro priartinimas, pakreipimas, horizontalus apvertimas.
-
-%VGG16 achitektūros žingsniai:
-%\begin{enumerate}
-%	\item Konvuliacija, konvuliacija, telkimas
-%	\item Konvuliacija, konvuliacija, telkimas
-%	\item Konvuliacija, konvuliacija, konvuliacija, telkimas
-%	\item Konvuliacija, konvuliacija, konvuliacija, telkimas
-%\end{enumerate}
-
-\subsubsubsection{Antrasis etapas}
-
-Antrajame etape, VGG16 
-
-\subsubsubsection{Trečiasis etapas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.8\linewidth]{img/vgg16filters}
+	\caption[]{Filtrų pavyzdžiai\footnotemark}
+	\label{img:filtersvgg}
+\end{figure}
+\footnotetext{\url{https://blog.keras.io/how-convolutional-neural-networks-see-the-world.html}}
 
 \section{Praktinis gestų kalbos apmokyto modelio pritaikymas}
 
 Praeituose skyriuose buvo aptarta, kokie būdai yra galimi apmokyti sistemą atpažinti gestų kalbą. Šiame skyriuje bus aprašyta, kaip šie aprašyti žingsniai buvo pritaikyti praktiškai.
 
-%Buvo pasirinkta pasidaryti du statinių gestų kalbos atpažinimo modelius. Pirmasis, kuris remiasi įprastinėmis sistemomis, ir antrasis, kuris remiasi konvoliucinio neuroninio tinklo modeliu.
-
 \subsection{Duomenys}
-Duomenys (programinis kodas ir kadrai) buvo parsisiųsti iš jau įgyvendintų pavyzdinių gestų kalbos sistemų. Viename iš duomenų rinkinių buvo po 150-250 gesto kadrų kiekvienai raidei (pavyzdys pateiktas \ref{img:a-sign} paveikslėlyje). Taip pat pasinaudojus šių kadrų paprastumu dėl šviesaus ir vienspalvio fono, buvo uždėti skirtingi fonai. 
+Duomenys (programinis kodas ir kadrai) buvo parsisiųsti iš jau įgyvendintų pavyzdinių gestų kalbos sistemų. Viename iš duomenų rinkinių buvo po 150-250 gesto kadrų kiekvienai raidei (pavyzdys pateiktas \ref{img:a-sign} paveikslėlyje). Taip pat pasinaudojus šių kadrų paprastumu dėl šviesaus ir vienspalvio fono, buvo uždėti skirtingi fonai.
 
 \begin{figure}[H]
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[width=.8\linewidth]{img/A1}
-		\caption{A raidės gestas su pakeistu fonu}
+		\includegraphics[width=.8\linewidth]{img/K1}
+		\caption{K raidės gestas su pakeistu fonu}
 		\label{img:a-sign-first}
 		%http://lifeprint.com/asl101/topics/wallpaper1.htm
 	\end{minipage}\hspace{\fill}%
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[width=.8\linewidth]{img/A2}
-		\caption{A raidės gestas su pakeistu fonu}
+		\includegraphics[width=.8\linewidth]{img/K2}
+		\caption{K raidės gestas su pakeistu fonu}
 		\label{img:a-sign-second}
 		%https://www.kspvm.lm.lt/images/naujienos/2016-2017/kurciuju-filmuko-laimejimas/img/lt-gestu-abecele.jpg
 	\end{minipage}\hspace{\fill}%
 \end{figure}
 
-Kiekvienam iš 150-250 kadrų kiekvienai raidei buvo uždėta po du atsitiktinai sugeneruotus fonus. Gesto dydis, spalva, pokrypis keičiamas nebuvo. Todėl buvo sudaryta po ~400 gesto kadrų kiekvienai raidei su 21 skirtingu fonu.
+Kiekvienam iš 150-250 kadrų kiekvienai raidei buvo uždėta po du atsitiktinai sugeneruotus fonus. Gesto dydis, spalva, pokrypis keičiamas nebuvo. Todėl buvo sudaryta po 400 gesto kadrų kiekvienai raidei su 21 skirtingu fonu, pakeičiant jų vietą, kampą, ištempimą ir kt.
 
 \subsection{Duomenų suskirstymas}
 
-Duomenys buvo suskirstyti į aplankus, kur aplanko pavadinimas rodo raidę, kurią atitinka gestas. Taip buvo sukurti 24 aplankai kiekvienai iš 24 ASL raidžių. Visi duomenys buvo suskirstyti į tris aplankus, kurie buvo skirti apmokymui, patikrinimui ir testavimui. Duomenų imta labai nedaug - apmokymui skirtų gestų kadrų buvo po 500 kiekvienai raidei, patikrinimui - 200 kiekvienai raidei ir dar 100 testavimui skirtų kadrų. Bendrai: 
-\begin{equation}
-	500*24+200*24+200=17000
-\end{equation}
+Duomenys buvo suskirstyti į aplankus, kur aplanko pavadinimas rodo raidę, kurią atitinka gestas. Taip buvo sukurti 24 aplankai kiekvienai iš 24 ASL raidžių. Visi duomenys buvo suskirstyti į tris aplankus, kurie buvo skirti apmokymui, patikrinimui ir testavimui. Duomenų imta labai nedaug - apmokymui skirtų gestų kadrų buvo po 400 kiekvienai raidei, patikrinimui - 200 kiekvienai raidei ir dar 100 testavimui skirtų kadrų.
 
 \subsection{Sistemos apmokymas}
-Buvo pasirinkta apmokyti sistemą konvoliucinio neuroninio tinklo modeliu. Buvo pasirinkta sistemą apmokyti naudojantis „Keras“ giliojo mokymosi biblioteka, kuri naudojosi „Te“ biblioteka (\textit{plačiau - 3.3.3. skyriuje}).
+Tyrimas buvo atliktas keliais skirtingais būdais.
 
-%\subsubsection{Duomenų suskirstymas}
+\subsubsection{Sistemos apmokymas naudojant įprastus metodus}
+Sistema buvo apmokyta naudojantis OpenCV atviro kodo biblioteka. Pasinaudota Sobel branduoliu ir logistinės regresijos bei linijiniu palaikančiųjų vektorių algoritmais. Reikėtų paminėti, jog šioje vietoje buvo pasirinkti kadrai, kurie yra su šviesiu fonu ir lengvai atskiriamas gestas nuo fono. Tuomet gestų duomenys pasinaudojus \textit{sklearn} savaime apsimokančios sistemos pagalba buvo sudėti į rinkmeną, kuri vėliau pasinaudojus šiais duomenimis atskirtų, koks gestas yra rodomas. Po apmokymų, atpažinimas svyravo tarp 95-98\%, jei turime lengvai nuimamą foną. Tačiau, jei fonas būdavo įvairus ir skirdavosi apšvietimas, sistema gestų arba neatpažindavo, arba atpažindavo neteisingai, o tikslumas po apmokymo svyravo tarp 50-60\%, todėl galima apibendrintai pasakyti, jog šių metodų tikslumas priklauso nuo duomenų kiekio ir programinio kodo, kuris gerai sugebėtų nuimti triukšmą ir esantį foną. Sistemos apmokymas truko apie 5 valandas, turint 400 kadrų kiekvienai ASL abėcėlės raidei.
+
+\textbf{Šių metodų minusai}:
+\begin{enumerate}
+	\item Sunku atskirti foną nuo gesto
+	\item Reikia daug skirtingų duomenų, kad algoritmai ganėtinai tiksliai atskirtų gestus
+	\item Sunkiai panaudojama prie bet kokio apšvietimo ir fono
+\end{enumerate}
+
+\subsubsection{Sistemos apmokymas naudojant konvoliucinio neuroninio tinklo modelį}
+
+Buvo pasirinkta sistemą naudojant konvoliucinio neuroninio tinklo modelį keliais skirtingais būdais:
+\begin{enumerate}
+	\item Nuodugiai
+	\item Dalinai
+\end{enumerate}
+Šiame apmokyme buvo pasinaudota gestais, kurie buvo modifikuoti pakeičiant foną, poziciją, pasukimo kampą, ištempimą ir kt.
 
 
-%\subsection{Atpažinimas naudojant gestų nuotraukas}
-%Norint, jog sistema apsimokytų kuo tiksliau, reikia jai duoti kuo daugiau duomenų. Sakykime, kad:
-%\begin{itemize}
-%	\item\textit{a\textsubscript{ik}} - \textit{i}-toji \textit{k}-tosios abėcėlės raidės nuotrauka 
-%	\item\textit{a\textsubscript{1k}, a\textsubscript{2k}, ..., a\textsubscript{nk}} - nuotraukų rinkinys, sudarytas iš \textit{n} \textit{k}-tosios raidės nuotraukų
-%\end{itemize}
-%Tuomet, turėdami \textit{n * k} nuotraukų, kuriuose vaizduojami gestų abėcėlės gestai, turime, jog tiek eilučių duomenų turėsime gestams atpažinti. Kuo gestai yra įvairesni prie skirtingų apšvietimų, skirtingų rankų ir pan., tuo tiksliau sistema pati galės vėliau atpažinti gestus.
+\subsubsubsection{Nuodugnus apmokymas}
+Nuodugniam apmokymui buvo pasirinkta pasinaudoti „Keras“ giliojo mokymosi biblioteka pasinaudojant „Theano“. Taip pat buvo pasirinkta VGG16 architektūra - 16 sluoksnių apmokymo modelis, kurio architektūros modelis pateiktas 1 priede (\textit{žr. \ref{img:vgg} pav.}). Apmokant sistemą nuodugniai buvo pasirinkta išbandyti apmokyti atpažinti tik dvi ASL raides - A ir B. Sistemos apmokymas truko kiek daugiau nei 2,5 valandos, turint 400 kiekvieno gesto kadrų mokymui ir 200 pasitikrinimui. Po šių apmokymų atpažinimas svyravo tarp 50-60\%. Tačiau išbandžius sistemą, buvo atpažįstami gestai esant bet kokiam apšvietimui, esant bet kokiam atstumui ir kt. Bendras tikslumas buvo geresnis nei naudojantis įprastais metodais.
 
+\textbf{Trūkumai}:
+\begin{enumerate}
+	\item Reikia daug duomenų, kad sistema gerai apsimokytų;
+	\item Užtrunka daug laiko.
+\end{enumerate}
 
-%\subsection{Atpažinimas naudojant internetinę kamerą}
-%Norint atpažinti statinius gestus naudojant internetinę kamerą, vienas iš to būdų yra naudotis \textit{BackgroundSubtractorMOG2} klase. Ši klasė remiasi Gauso maišos priekinio plano/fono atskyrimo algoritmu
+\subsubsubsection{Dalinis apmokymas}
+Daliniam apmokymui buvo pasinaudota „Inception-v3“ jau apmokytu modeliu, kuris yra „TensorFlow“ bibliotekoje. Buvo nutrinamas paskutinis sluoksnis ir sistema papildomai apmokyta atpažinti tik ASL abėcėlės raides. Sistemos apmokymui buvo pasinaudota 400 kadrų kiekvienai ASL abėcėlės raidei. 
 
+\textbf{Pirmasis bandymas}
 
+Pirmasis apmokymas buvo skirtas atpažinti tik dvi raides - A ir B. Po apmokymo, kuris užtruko apie 5 minutes, atpažinimas svyravo tarp 95-98\%, tačiau testuojant, visi atsakymai buvo teisingi.
 
-%\section{Pagrindinė tiriamoji dalis}
-%Pagrindinėje tiriamojoje dalyje aptariama ir pagrindžiama tyrimo metodika;
-%pagal atitinkamas darbo dalis, nuosekliai, panaudojant lyginamosios analizės,
-%klasifikacijos, sisteminimo metodus bei apibendrinimus, dėstoma sukaupta ir
-%išanalizuota medžiaga.
-%
-%\subsection{Poskyris}
-%Citavimo pavyzdžiai: cituojamas vienas šaltinis \cite{PvzStraipsnLt}; cituojami
-%keli šaltiniai \cite{PvzStraipsnEn, PvzKonfLt, PvzKonfEn, PvzKnygLt, PvzKnygEn,
-%PvzElPubLt, PvzElPubEn, PvzMagistrLt, PvzPhdEn}.
-%
-%\subsubsection{Skirsnis}
-%\subsubsubsection{Straipsnis}
-%\subsubsection{Skirsnis}
-%\section{Skyrius}
-%\subsection{Poskyris}
-%\subsection{Poskyris}
+\textbf{Antrasis bandymas}
+
+Antrasis apmokymas buvo skirtas atpažinti visas ASL abėcėlės 24 statines raides. Sistemos apmokymas užtruko apie 30 minučių.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.8\linewidth]{img/accuracy}
+	\caption{Tikslumo grafikas su 400 kadrų ir 500 apmokymo žingsnių}
+	\label{img:acc}
+\end{figure}
+
+Su 400 kadrų kiekvienai ASL abėcėlės raidei, \ref{img:acc} grafikas rodo apmokyto modelio tikslumą. Gesto atpažinimo tikslumas su 400 kadrų yra apie 60\%, kiek mažesnis tikslumas yra patikrinimo, bet taip pat apie 60\%. Grafike oranžinė linija rodo apmokymo tikslumą, o mėlyna - patikrinimo. Šis apmokymas buvo atliktas su 500 apmokymo žingsnių.
+
+\textbf{Trečiasis bandymas}
+
+Pasirinkti tie patys duomenys – 400 kadrų kiekvienai ASL abėcėlės raidei, tik padidintas apmokymo žingsnių skaičius iki 5000.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.8\linewidth]{img/accuracy2}
+	\caption{Tikslumo grafikas su 400 kadrų ir 5000 apmokymo žingsnių}
+	\label{img:acc2}
+\end{figure}
+
+Su 400 kadrų kiekvienai ASL abėcėlės raidei, \ref{img:acc2} grafikas rodo apmokyto modelio tikslumą. Šiuo atveju, kaip ir buvo minėta, žingsnių skaičius pasirinktas 5000. Sistemos tikslumas padidėjo nuo 60\% iki beveik 85\% mokymosi metu ir 77\% patikrinimo metu.
+
+\textbf{Ketvirtasis bandymas}
+
+Ketvirtasis apmokymas buvo skirtas taip pat atpažinti visas ASL abėcėlės raides, tačiau buvo naudojama po 1000 kadrų kiekvienai raidei ir duomenys papildyti gestą vertikaliai apverčiant prie tų duomenų, kurie buvo. Sistema buvo apmokyta per 45 minutes ir pasirinkta naudoti 5000 apmokymo žingsnių. Mokymosi tiksumas – 85\%, o patikrinimo tikslumas – 79\% (\textit{žr. \ref{img:acc3} pav.}). Kadangi kadrai buvo labai panašūs į prieš tai buvusius 400, tik padidintas jų skaičius, tai ir rezultatai beveik nesiskiria nuo praeito bandymo. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.8\linewidth]{img/accuracy3}
+	\caption{Tikslumo grafikas su 1000 kadrų ir 5000 apmokymo žingsnių}
+	\label{img:acc3}
+\end{figure}
+
+\textbf{Penktasis bandymas}
+
+Penktuoju bandymu buvo naudojama dar daugiau duomenų. Panaudota apie 3000 kadrų kiekvienai abėcėlės raidei, pasirinktas 5000 apmokymo žingsnių metodas. Šiu atveju mokymosi tikslumas išaugo iki ...\% ir ...\% pasitikrinimo metu (\textit{žr. \ref{img:acc4} pav.})
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.8\linewidth]{img/accuracy3}
+	\caption{Tikslumo grafikas su 3000 kadrų ir 5000 apmokymo žingsnių}
+	\label{img:acc4}
+\end{figure}
+
+\subsection{Apibendrinimas}
+Buvo išbandyti trys skiritngi apmokymų būdai. Geriausias ir tiksliausiai atpažįstantis būdas gautas, naudojant konvoliucinio neuroninio tinklo dalinio apmokymo modelį, kuris nesunkiai esant įvairiems apšvietimams ir gestų rodymo kampams atpažįsta gestus, net ir esant nedidelei duomenų aibei. Tačiau esant kuo didesnei duomenų aibei, dideliam apmokymo žingsnių skaičiui, sistemos atpažinimas tapo iškart žymiai geresnis. Norint dar tikslesnių duomenų, reiktų sistemą apmokyti turint daugiau duomenų, daryti dar didesnę duomenų augmentaciją, pasinaudoti skirtingais duomenų rinkiniais.
+
+\begin{minipage}{\linewidth}
+	\centering
+	\captionof{table}{Konvuliacinių neuroninių tinklų ASL abėcėlės apmokymų statistika} \label{tab:title} 
+	\begin{tabular}{ |c|c|c|c|c| } 
+		\hline
+		 & \thead{Antras\\bandymas} & \thead{Trečias\\bandymas} & \thead{Ketvirtas\\bandymas} & \thead{Penktas\\bandymas} \\
+		\hline
+		%\multirow {Multiple row} & cell2 & cell3 \\ 
+		Apmokymo tikslumas & ~60\% & 85\% & 85\% & y\% \\ 
+		Patikrinimo tikslumas & ~60\% & 77\% & 79\% & Y\% \\ 
+		\hline
+	\end{tabular}
+\end{minipage}
+
 
 \sectionnonum{Išvados}
-Išvadose ir pasiūlymuose, nekartojant atskirų dalių apibendrinimų,
-suformuluojamos svarbiausios darbo išvados, rekomendacijos bei pasiūlymai.
+Šiame darbe aptartos įvairios apmokymo galimybės ir visos jos išbandytos. Pastebėta, kad konvoliuciniai neuroniniai tinklai, kurie apmokomi dalinai yra labai galingas ir lengvai apmokomas bet kokiai sričiai įrankis. Įrankį, kuris atpažįsta gestų kalbą, nėra sunku sukurti turint įprastą kompiuterį ir neturint jokių specialių įrankių ir aplinkų. Norint dar tikslesnių duomenų reikia kur kas didesnių duomenų rinkinių ir daugiau laiko. Taip pat buvo paliesta tik statinė gestų kalbos pusė. Norint atpažinti dinaminius gestų kalbos ženklus, reikėtų pasinaudoti rekurentinių neuroninių tinklų galimybėmis, kurios buvo labai mažai paliestos teorijos skyriuje ir daugiau nenagrinėtos, nes buvo akcentuojamasi į statinių ženklų atpažinimą. Toks sukurtas ir pilnai išvystytas modelis būtų labai naudingas gestakalbiams jaustis pilnavertiškai visur be galimybės „nesusišnekėti“. Pastebėta, kad šiam modeliui įtakos neturi nei apšvietimas, nei odos spalva, nei kiti faktoriai. 
 
 \printbibliography[heading=bibintoc] % Literatūros šaltiniai aprašomi
 % bibliografija.bib faile. Šaltinių sąraše nurodoma panaudota literatūra,
@@ -643,9 +685,19 @@ suformuluojamos svarbiausios darbo išvados, rekomendacijos bei pasiūlymai.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{img/vgg-architecture}
-    \caption{VGG16 architektūros modelis}   % Antraštė įterpiama po paveikslėlio
+    \caption[]{VGG16 architektūros modelis\footnotemark}   % Antraštė įterpiama po paveikslėlio
     \label{img:vgg}
 \end{figure}
+\footnotetext{\url{https://blog.keras.io/img/imgclf/vgg16_original.png}}
+
+\section{Inception-v3 architektūra}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img/inception_v3}
+	\caption[]{Inception-v3 architektūros modelis\footnotemark}   % Antraštė įterpiama po paveikslėlio
+	\label{img:inception}
+\end{figure}
+\footnotetext{\url{https://github.com/tensorflow/models/tree/master/inception}}
 %
 %
 %\section{Eksperimentinio palyginimo rezultatai}

@@ -56,12 +56,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.3.3.}Apmokymas naudojantis konvoliucinio neuroninio tinklo modeliu}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.3.3.1.}Pirmasis etapas}{16}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.3.3.2.}Antrasis etapas}{16}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.3.3.3.}Trečiasis etapas}{16}
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.}Praktinis gestų kalbos apmokyto modelio pritaikymas}{17}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.}Duomenys}{17}
@@ -70,10 +64,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.}Sistemos apmokymas}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Išvados}{18}
+\contentsline {subsubsection}{\numberline {4.3.1.}Sistemos apmokymas naudojant įprastus metodus}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{19}
+\contentsline {subsubsection}{\numberline {4.3.2.}Sistemos apmokymas naudojant konvoliucinio neuroninio tinklo modelį}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {4.3.2.1.}Nuodugnus apmokymas}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {4.3.2.2.}Dalinis apmokymas}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.}Apibendrinimas}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Išvados}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Literatūra}{22}
 \defcounter {refsection}{0}\relax 
 \def \@dotsep {1000}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Priedas Nr.1}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Priedas Nr.2}{}

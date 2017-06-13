@@ -86,6 +86,15 @@
 % Pliuso ženklas, kuris rodomas esant >3 autoriams, sumažinamas ir pakeliamas
 \renewcommand*{\labelalphaothers}{\textsuperscript{+}}
 
+% table %
+
+\RequirePackage{makecell}
+\renewcommand\theadalign{cb}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+
 % -------------------------------
 % Titulinio puslapio formatavimas
 % -------------------------------
