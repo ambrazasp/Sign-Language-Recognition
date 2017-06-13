@@ -74,9 +74,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.4.}Apibendrinimas}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Išvados}{21}
+\contentsline {section}{Išvados}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{22}
+\contentsline {section}{Literatūra}{23}
 \defcounter {refsection}{0}\relax 
 \def \@dotsep {1000}
 \defcounter {refsection}{0}\relax 

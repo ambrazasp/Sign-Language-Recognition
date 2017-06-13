@@ -638,17 +638,17 @@ Ketvirtasis apmokymas buvo skirtas taip pat atpažinti visas ASL abėcėlės rai
 
 \textbf{Penktasis bandymas}
 
-Penktuoju bandymu buvo naudojama dar daugiau duomenų. Panaudota apie 3000 kadrų kiekvienai abėcėlės raidei, pasirinktas 5000 apmokymo žingsnių metodas. Šiu atveju mokymosi tikslumas išaugo iki ...\% ir ...\% pasitikrinimo metu (\textit{žr. \ref{img:acc4} pav.})
+Penktuoju bandymu buvo naudojama dar daugiau duomenų. Panaudota apie 3000 kadrų kiekvienai abėcėlės raidei, pasirinktas 5000 apmokymo žingsnių metodas. Duomenys naudoti iš trijų skirtingų duomenų rinkinių. Šiu atveju mokymosi tikslumas nukrito iki 80\% ir išaugo iki 80\% pasitikrinimo metu (\textit{žr. \ref{img:acc4} pav.}). Galima pastebėti, jog bendras mokymosi tikslumas nelabai pakito, tačiau padidėjo patikrinimo tikslumas.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.8\linewidth]{img/accuracy3}
+	\includegraphics[width=.8\linewidth]{img/accuracy4}
 	\caption{Tikslumo grafikas su 3000 kadrų ir 5000 apmokymo žingsnių}
 	\label{img:acc4}
 \end{figure}
 
 \subsection{Apibendrinimas}
-Buvo išbandyti trys skiritngi apmokymų būdai. Geriausias ir tiksliausiai atpažįstantis būdas gautas, naudojant konvoliucinio neuroninio tinklo dalinio apmokymo modelį, kuris nesunkiai esant įvairiems apšvietimams ir gestų rodymo kampams atpažįsta gestus, net ir esant nedidelei duomenų aibei. Tačiau esant kuo didesnei duomenų aibei, dideliam apmokymo žingsnių skaičiui, sistemos atpažinimas tapo iškart žymiai geresnis. Norint dar tikslesnių duomenų, reiktų sistemą apmokyti turint daugiau duomenų, daryti dar didesnę duomenų augmentaciją, pasinaudoti skirtingais duomenų rinkiniais.
+Buvo išbandyti trys skirtingi apmokymų būdai. Geriausias ir tiksliausiai atpažįstantis būdas gautas, naudojant konvoliucinio neuroninio tinklo dalinio apmokymo modelį, kuris nesunkiai esant įvairiems apšvietimams ir gestų rodymo kampams atpažįsta gestus, net ir esant nedidelei duomenų aibei. Tačiau esant kuo didesnei duomenų aibei, dideliam apmokymo žingsnių skaičiui, sistemos atpažinimas tapo iškart žymiai geresnis. Norint dar tikslesnių duomenų, reiktų sistemą apmokyti turint daugiau duomenų, daryti dar didesnę duomenų augmentaciją, pasinaudoti skirtingais duomenų rinkiniais. Pastebėta, jog padidinus apmokymo žingsnių skaičių duomenų atpažinimo rodikliai pakilo, tačiau didinant apmokomų duomenų kiekį rezultatai nelabai skiriasi. Bendrus rezultatus galima palygtinti \ref{tab:title} lentelėje.
 
 \begin{minipage}{\linewidth}
 	\centering
@@ -658,8 +658,8 @@ Buvo išbandyti trys skiritngi apmokymų būdai. Geriausias ir tiksliausiai atpa
 		 & \thead{Antras\\bandymas} & \thead{Trečias\\bandymas} & \thead{Ketvirtas\\bandymas} & \thead{Penktas\\bandymas} \\
 		\hline
 		%\multirow {Multiple row} & cell2 & cell3 \\ 
-		Apmokymo tikslumas & ~60\% & 85\% & 85\% & y\% \\ 
-		Patikrinimo tikslumas & ~60\% & 77\% & 79\% & Y\% \\ 
+		Apmokymo tikslumas & ~60\% & 85\% & 85\% & 80\% \\ 
+		Patikrinimo tikslumas & ~60\% & 77\% & 79\% & 80\% \\ 
 		\hline
 	\end{tabular}
 \end{minipage}
