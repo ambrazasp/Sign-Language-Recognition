@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.5.15)  13 JUN 2017 23:43
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.5.15)  15 JUN 2017 11:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1369,13 +1369,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [3]
 File: img/neuron-structure.jpg Graphic file (type QTm)
  <use  "img/neuron-structure.jpg" >
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 97.
-
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 100
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 97--97
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
 [][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][] [] [][][] [] []
 [][][][][][][][][] [] [][][][][][][][][][][][] [] [][][][][][][][][][] [] [][][
 ][][][][][][][][][] []
@@ -1430,12 +1430,17 @@ File: img/accuracy3.png Graphic file (type QTm)
  <use  "img/accuracy3.png" >
 File: img/accuracy4.png Graphic file (type QTm)
 
-<use  "img/accuracy4.png" >
-Overfull \hbox (19.91684pt too wide) in paragraph at lines 653--666
+<use  "img/accuracy4.png" > [20]
+Overfull \hbox (19.91684pt too wide) in paragraph at lines 664--677
 []$[]$ 
  []
 
-[20] [21] [22
+
+Overfull \hbox (19.91684pt too wide) in paragraph at lines 679--694
+[]$[]$ 
+ []
+
+[21] [22
 
 ] [23
 
@@ -1454,10 +1459,10 @@ Package logreq Info: Writing requests to 'kursinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34313 strings out of 493638
- 666707 string characters out of 6146796
- 1002089 words of memory out of 5000000
- 37187 multiletter control sequences out of 15000+600000
+ 34314 strings out of 493638
+ 666719 string characters out of 6146796
+ 1000098 words of memory out of 5000000
+ 37188 multiletter control sequences out of 15000+600000
  15734 words of font info for 86 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  68i,16n,96p,10497b,2263s stack positions out of 5000i,500n,10000p,200000b,80000s

@@ -12,7 +12,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.}Teorija}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.}Apsimokančios sistemos}{4}
+\contentsline {subsection}{\numberline {1.1.}Apmokomos sistemos}{4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.}Neuroniniai tinklai}{4}
 \defcounter {refsection}{0}\relax 
@@ -48,7 +48,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {3.2.2.3.}K artimiausių kaimynų algoritmas}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.}Sistemos apmokymas, naudojantis konvoliucinio neuroninio tinklo modeliu}{13}
+\contentsline {subsection}{\numberline {3.3.}Sistemos apmokymas, naudojantis konvoliucinio neuroninio tinklo modeliu}{14}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.3.1.}Konvoliucinis sluoksnis}{14}
 \defcounter {refsection}{0}\relax 
@@ -72,7 +72,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {4.3.2.2.}Dalinis apmokymas}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.}Apibendrinimas}{20}
+\contentsline {subsection}{\numberline {4.4.}Apibendrinimas}{21}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Išvados}{22}
 \defcounter {refsection}{0}\relax 
